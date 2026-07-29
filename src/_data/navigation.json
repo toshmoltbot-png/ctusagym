@@ -10,6 +10,7 @@
     { "label": "Policies", "url": "/policies/" },
     { "label": "Clubs", "url": "/clubs/" },
     { "label": "SafeSport", "url": "/safesport/" },
+    { "label": "Hall of Fame", "url": "/hall-of-fame/" },
     { "label": "About", "url": "/about/" }
   ]
 }

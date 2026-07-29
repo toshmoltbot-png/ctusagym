@@ -1,0 +1,49 @@
+[
+  {
+    "year": 2025,
+    "title": "Class of 2025",
+    "photo": "",
+    "inductees": [
+      { "name": "TBA", "bio": "2025 Hall of Fame class details to be announced." }
+    ]
+  },
+  {
+    "year": 2023,
+    "title": "Class of 2023",
+    "photo": "/images/photos/2023_HOF_Robin__Ashley_and_Justin_large.jpg",
+    "inductees": [
+      { "name": "Robin", "bio": "" },
+      { "name": "Ashley", "bio": "" },
+      { "name": "Justin", "bio": "" }
+    ]
+  },
+  {
+    "year": 2022,
+    "title": "Class of 2022",
+    "photo": "/images/photos/HOF_Inductees_large.jpg",
+    "inductees": [
+      {
+        "name": "John Cheng",
+        "bio": "John Cheng immigrated to the United States from Taiwan when he was 13 years old. He watched TV to learn English, and went on to graduate from Texas A & M University with a degree in Electrical Engineering. In 1992, he married his high school crush, Selma. They had two daughters, Allison and Brooke, and relocated from Texas to Connecticut in 2003. Photography became his new hobby, and John started taking pictures of Allison doing gymnastics. When NEGX hosted the 2004 Level 7 & 8 State Championships, they asked John if he would take pictures as a fundraiser, and Team Photo was born! John used his IT skills to develop a system of folders for each athlete on each event. Subsequently, John was very much in demand. Team Photo expanded and John was soon covering other invitationals and State meets in Connecticut and Massachusetts. As a vendor photographer for Deary's Gymnastics Supply, John shot his first Visa Championships in St. Paul in 2006. He became the USAG staff photographer in 2007. John photographed his first World Championships in London in 2009 and has covered every World Championships for Team USA since. John has photographed the Olympic Games through 3 cycles: London (2012), Rio (2016), and Tokyo (2020). John's photos have appeared in Sports Illustrated, the cover of People magazine, and on the Wheaties box in 2021. John has never forgotten his Connecticut roots, and continues to shoot our Connecticut athletes at local invitationals and our State Championships."
+      },
+      {
+        "name": "Jerry Nelson",
+        "bio": "Jerry Nelson has been a fixture in the Connecticut Gymnastics community for nearly 50 years. As a freshman at SCSC (now SCSU), Jerry competed pommel horse for the 1973 Division II National Champion Owls. After finishing 2nd in 1974, the 1975 team reclaimed the National title, and Jerry has been inducted into the SCSU Athletic Hall of Fame twice. Jerry became Head Coach at Terryettes Gymnastics and at 24 years old had his first National All Around Champion, Lea Hersant. He and his wife Joanne built several successful business ventures including 5 locations of Nelson's Gymnastics Center and the USA Fun Bus. In 1993, during his tenure as USA Gymnastics State Chairman, Jerry was Commissioner of Gymnastics for the 1995 Special Olympic World Championships in New Haven. He continued volunteer work as Director of Gymnastics and Cheerleading at America's Camp for children who lost a parent on 9/11, and at Camp SeaStars North for the surviving children of Sandy Hook. In 1999, Jerry became the Event and Marketing Director for USA Gymnastics national and international televised events. He began coaching at SCSU in 2003, serving as Head Coach from 2004. During his tenure, SCSU won 3 ECAC Team Championships, Jerry was named ECAC Coach of the Year 5 times, and in 2007 was NCAA DII National Coach of the Year. He coached 86 All-American Athletes before retiring in 2019."
+      },
+      {
+        "name": "Lisa Shirk",
+        "bio": "Lisa Shirk is a former Connecticut elite gymnast and US National Team member. Her rise to the elite ranks was extraordinarily fast. Lisa's gymnastics career began at the Danbury War Memorial recreational center when she was 11 years old. With extremely limited equipment, she outgrew that program quickly and moved to Southern Connecticut Gym Club. Lisa competed in her first elite meet at age 14, a mere 3 years after starting gymnastics. In 1978, Lisa finished 11th at the World Championship Trials, solidifying her position on the US National Team. Lisa was chosen to represent the United States in London. With her sights on the 1980 Olympics, Lisa was ready until President Carter's boycott of the Moscow Olympics ended her Olympic dream. Lisa began her collegiate career at the University of Pittsburgh on a full scholarship. As a freshman, she was the only Pitt gymnast to qualify for the AIAW Collegiate National Championships, finishing 2nd All Around and earning three All American honors. In 1982, Lisa became the first ever NCAA National Uneven Bars Champion. Forty years later, she remains the only National Gymnastics Champion from the University of Pittsburgh. In 2018, Lisa was inducted into the Inaugural University of Pittsburgh Athletic Hall of Fame alongside Dan Marino, Tony Dorsett, and Charles Smith."
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "title": "Class of 2019",
+    "photo": "/images/photos/Byron__Linda__Chris.jpeg_large.jpg",
+    "inductees": [
+      { "name": "Byron", "bio": "" },
+      { "name": "Linda", "bio": "" },
+      { "name": "Chris", "bio": "" }
+    ]
+  }
+]
