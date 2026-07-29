@@ -16,50 +16,87 @@ collections_config:
     filter:
       base: all
 
-data_config:
   calendar:
-    path: _data/calendar.json
+    path: _data
     name: Season Calendar
     icon: calendar_month
+    output: false
+    glob:
+      - _data/calendar.json
+
   announcements:
-    path: _data/announcements.json
+    path: _data
     name: Announcements
     icon: campaign
+    output: false
+    glob:
+      - _data/announcements.json
+
   clubs:
-    path: _data/clubs.json
+    path: _data
     name: Clubs Directory
     icon: location_on
+    output: false
+    glob:
+      - _data/clubs.json
+
   photos:
-    path: _data/photos.json
+    path: _data
     name: Homepage Photos
     icon: photo_library
-  site:
-    path: _data/site.json
-    name: Site Settings
-    icon: settings
-  navigation:
-    path: _data/navigation.json
-    name: Navigation
-    icon: menu
+    output: false
+    glob:
+      - _data/photos.json
+
   state_meets:
-    path: _data/state_meets.json
+    path: _data
     name: State Meets
     icon: emoji_events
+    output: false
+    glob:
+      - _data/state_meets.json
+
   judges_committee:
-    path: _data/judges_committee.json
+    path: _data
     name: Judges Committee
     icon: gavel
+    output: false
+    glob:
+      - _data/judges_committee.json
+
   fees:
-    path: _data/fees.json
+    path: _data
     name: Entry Fees
     icon: payments
+    output: false
+    glob:
+      - _data/fees.json
+
   qualification_scores:
-    path: _data/qualification_scores.json
+    path: _data
     name: Qualification Scores
     icon: score
+    output: false
+    glob:
+      - _data/qualification_scores.json
+
+  site_settings:
+    path: _data
+    name: Site Settings
+    icon: settings
+    output: false
+    glob:
+      - _data/site.json
+
+  navigation:
+    path: _data
+    name: Navigation
+    icon: menu
+    output: false
+    glob:
+      - _data/navigation.json
 
 _inputs:
-  # Calendar event fields
   name:
     type: text
     label: Event Name
@@ -86,8 +123,6 @@ _inputs:
   location:
     type: text
     label: Full Address
-  
-  # Club fields
   address:
     type: text
     label: Street Address
@@ -112,8 +147,6 @@ _inputs:
   note:
     type: text
     label: Note
-  
-  # Announcement fields
   date:
     type: text
     label: Date Label
@@ -135,8 +168,6 @@ _inputs:
   link:
     type: url
     label: Link URL
-
-  # Photo fields
   src:
     type: image
     label: Photo
@@ -146,8 +177,6 @@ _inputs:
   caption:
     type: text
     label: Caption
-
-  # Site settings
   chairman_name:
     type: text
     label: State Chairman Name
