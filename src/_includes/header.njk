@@ -1,0 +1,27 @@
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex h-16 items-center justify-between gap-6">
+      <a href="/" class="flex shrink-0 items-center gap-3">
+        <img src="/images/ct-usag-logo-clr-horiz.png" width="4273" height="589" alt="Connecticut USA Gymnastics" class="h-auto w-[220px] max-w-[55vw] shrink-0" loading="eager" decoding="async">
+        <span class="sr-only">Connecticut Women's USA Gymnastics</span>
+      </a>
+      <nav class="hidden items-center xl:flex xl:gap-1" aria-label="Primary">
+        {% for item in navigation.main %}
+        <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-2 lg:px-3 py-2 text-sm font-semibold transition {% if page.url == item.url %}bg-slate-900 text-white{% else %}text-slate-700 hover:bg-slate-100 hover:text-slate-900{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+          {{ item.label }}
+        </a>
+        {% endfor %}
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="/resources" class="inline-flex items-center rounded-md bg-[color:var(--usag-red)] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[color:var(--usag-red)] focus:ring-offset-2">Quick Links</a>
+      </div>
+    </div>
+    <nav class="-mx-2 flex gap-2 overflow-x-auto border-t border-slate-100 px-2 py-2 xl:hidden" aria-label="Primary">
+      {% for item in navigation.main %}
+      <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold {% if page.url == item.url %}bg-slate-900 text-white{% else %}bg-slate-100 text-slate-800{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+        {{ item.label }}
+      </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

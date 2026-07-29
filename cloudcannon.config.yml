@@ -1,0 +1,173 @@
+# CloudCannon configuration for CT USAG Gym site
+# Docs: https://cloudcannon.com/documentation/
+
+source: src
+paths:
+  data: _data
+  includes: _includes
+  output: _site
+
+collections_config:
+  pages:
+    path: pages
+    name: Pages
+    icon: description
+    output: true
+    filter:
+      base: all
+
+data_config:
+  calendar:
+    path: _data/calendar.json
+    name: Season Calendar
+    icon: calendar_month
+  announcements:
+    path: _data/announcements.json
+    name: Announcements
+    icon: campaign
+  clubs:
+    path: _data/clubs.json
+    name: Clubs Directory
+    icon: location_on
+  photos:
+    path: _data/photos.json
+    name: Homepage Photos
+    icon: photo_library
+  site:
+    path: _data/site.json
+    name: Site Settings
+    icon: settings
+  navigation:
+    path: _data/navigation.json
+    name: Navigation
+    icon: menu
+  state_meets:
+    path: _data/state_meets.json
+    name: State Meets
+    icon: emoji_events
+  judges_committee:
+    path: _data/judges_committee.json
+    name: Judges Committee
+    icon: gavel
+  fees:
+    path: _data/fees.json
+    name: Entry Fees
+    icon: payments
+  qualification_scores:
+    path: _data/qualification_scores.json
+    name: Qualification Scores
+    icon: score
+
+_inputs:
+  # Calendar event fields
+  name:
+    type: text
+    label: Event Name
+  status:
+    type: select
+    label: Status
+    options:
+      values:
+        - sanctioned
+        - pending
+        - cancelled
+  start:
+    type: date
+    label: Start Date
+  end:
+    type: date
+    label: End Date
+  host:
+    type: text
+    label: Host Club/Venue
+  state:
+    type: text
+    label: State
+  location:
+    type: text
+    label: Full Address
+  
+  # Club fields
+  address:
+    type: text
+    label: Street Address
+  city:
+    type: text
+    label: City
+  zip:
+    type: text
+    label: ZIP Code
+  phone:
+    type: text
+    label: Phone
+  website:
+    type: url
+    label: Website
+  email:
+    type: email
+    label: Email
+  contact:
+    type: text
+    label: Contact Person
+  note:
+    type: text
+    label: Note
+  
+  # Announcement fields
+  date:
+    type: text
+    label: Date Label
+  category:
+    type: select
+    label: Category
+    options:
+      values:
+        - forms
+        - general
+        - results
+        - safesport
+  title:
+    type: text
+    label: Title
+  description:
+    type: textarea
+    label: Description
+  link:
+    type: url
+    label: Link URL
+
+  # Photo fields
+  src:
+    type: image
+    label: Photo
+  alt:
+    type: text
+    label: Alt Text
+  caption:
+    type: text
+    label: Caption
+
+  # Site settings
+  chairman_name:
+    type: text
+    label: State Chairman Name
+  chairman_email:
+    type: email
+    label: State Chairman Email
+  copyright_year:
+    type: text
+    label: Copyright Year
+  footer_tagline:
+    type: textarea
+    label: Footer Tagline
+
+_editables:
+  content:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    heading: true
+
+_structures: {}

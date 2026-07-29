@@ -1,0 +1,141 @@
+---
+layout: base.njk
+title: Connecticut Women's USA Gymnastics
+permalink: /
+---
+
+{# Hero Section #}
+<section class="relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(1200px_circle_at_20%_10%,rgba(10,29,58,0.18),transparent_60%),radial-gradient(900px_circle_at_80%_30%,rgba(214,0,0,0.14),transparent_55%),linear-gradient(to_bottom,rgba(10,29,58,0.92),rgba(10,29,58,0.78))]" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-18">
+    <div class="max-w-2xl">
+      <img src="/images/ct-usag-logo-white.png" width="1710" height="1222" alt="Connecticut USA Gymnastics" class="h-20 w-auto" loading="eager" decoding="async">
+      <p class="mt-6 text-sm font-semibold tracking-wide text-white/80">Official State Committee Hub</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight text-white sm:text-5xl">{{ site.title }}</h1>
+      <p class="mt-4 text-base text-white/80 sm:text-lg">Fast access to the season calendar, meet information, forms, rules, and SafeSport resources&mdash;built mobile-first for meet-day use.</p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <a href="/calendar/" class="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-bold text-slate-900 shadow-sm transition hover:bg-white/95">View Season Calendar</a>
+        <a href="/safesport/" class="inline-flex items-center justify-center rounded-md bg-[color:var(--usag-red)] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:opacity-95">SafeSport</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Quick Nav Cards #}
+<section class="relative z-10 mx-auto -mt-8 max-w-6xl px-4 pb-10 sm:px-6">
+  <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    {% set cards = [
+      { "title": "Events Hub", "desc": "State meets, camps, and clinics", "url": "/events/" },
+      { "title": "Host a Meet", "desc": "Submit a host request / sanction details", "url": "/resources/#host-a-meet" },
+      { "title": "State Meet Bids", "desc": "Bid forms and requirements", "url": "/resources/#state-meet-bids" },
+      { "title": "Petitions & Rules", "desc": "Policies, rules, and petitions", "url": "/resources/#petitions-rules" }
+    ] %}
+    {% for card in cards %}
+    <a href="{{ card.url }}" class="group rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <div class="text-sm font-extrabold tracking-tight text-slate-900">{{ card.title }}</div>
+          <div class="mt-1 text-xs leading-snug text-slate-600">{{ card.desc }}</div>
+        </div>
+        <div class="grid size-9 shrink-0 place-items-center rounded-lg bg-slate-100 text-slate-700 transition group-hover:bg-slate-900 group-hover:text-white" aria-hidden="true">&rarr;</div>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# Photo Carousel + Announcements #}
+<section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+  <div class="grid gap-6 lg:grid-cols-3">
+    {# Carousel #}
+    <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm lg:col-span-2" id="photo-carousel">
+      <div class="relative">
+        <div class="overflow-hidden">
+          <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out">
+            {% for photo in photos %}
+            <div class="w-full flex-shrink-0">
+              <img src="{{ photo.src }}" alt="{{ photo.alt }}" class="aspect-[16/9] w-full object-cover" loading="lazy">
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <button id="carousel-prev" class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur transition hover:bg-black/70" aria-label="Previous photo">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button id="carousel-next" class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-2 text-white backdrop-blur transition hover:bg-black/70" aria-label="Next photo">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+        </button>
+      </div>
+      <div class="flex items-center justify-between gap-4 px-5 py-3">
+        <p id="carousel-caption" class="text-sm font-black text-slate-900">{{ photos[0].caption }}</p>
+        <div class="flex gap-1.5" id="carousel-dots">
+          {% for photo in photos %}
+          <button class="h-2 w-2 rounded-full transition {% if loop.first %}bg-[color:var(--usag-red)]{% else %}bg-slate-300{% endif %}" data-index="{{ loop.index0 }}" aria-label="Go to photo {{ loop.index }}"></button>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+      const captions = {{ photos | dump | safe }}.map(p => p.caption);
+      const track = document.getElementById('carousel-track');
+      const caption = document.getElementById('carousel-caption');
+      const dots = document.querySelectorAll('#carousel-dots button');
+      const prev = document.getElementById('carousel-prev');
+      const next = document.getElementById('carousel-next');
+      if (!track || !caption || !prev || !next) return;
+      let current = 0;
+      const total = captions.length;
+      let autoTimer;
+      function goTo(i) {
+        current = ((i % total) + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        caption.textContent = captions[current];
+        dots.forEach((d, idx) => {
+          d.classList.toggle('bg-[color:var(--usag-red)]', idx === current);
+          d.classList.toggle('bg-slate-300', idx !== current);
+        });
+      }
+      function startAuto() { stopAuto(); autoTimer = setInterval(() => goTo(current + 1), 5000); }
+      function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+      prev.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+      next.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+      dots.forEach(d => d.addEventListener('click', () => { goTo(Number(d.dataset.index)); startAuto(); }));
+      startAuto();
+    })();
+    </script>
+
+    {# Announcements Sidebar #}
+    <aside class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <h2 class="text-sm font-black tracking-wide text-slate-900">Announcements</h2>
+      <ul class="mt-4 space-y-3">
+        {% for item in announcements %}
+        <li class="rounded-lg bg-slate-50 p-3">
+          <div class="flex items-center justify-between gap-3">
+            <div class="text-xs font-semibold text-slate-600">{{ item.date }}</div>
+            <div class="rounded-full bg-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-600">{{ item.category }}</div>
+          </div>
+          <div class="mt-1 text-sm font-bold text-slate-900">{{ item.title }}</div>
+          <div class="mt-1 text-xs text-slate-600">{{ item.description }}</div>
+          {% if item.link %}
+          <a href="{{ item.link }}" class="mt-2 inline-flex text-xs font-bold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900">Learn more</a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </aside>
+  </div>
+</section>
+
+{# Champions Feature #}
+<section class="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+  <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm sm:flex">
+    <img src="/images/photos/2025-all-around-champions.jpg" alt="2025 USA Gymnastics All Around Champions" class="aspect-[3/2] w-full object-cover sm:w-1/2" loading="lazy">
+    <div class="flex flex-col justify-center p-6 sm:p-8">
+      <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[color:var(--usag-red)]">Congratulations</p>
+      <h2 class="mt-2 text-2xl font-black tracking-tight text-slate-950">2025 All Around Champions</h2>
+      <p class="mt-3 text-sm leading-6 text-slate-600">Congratulations to all Connecticut athletes who competed at the 2025 State Championships.</p>
+      <a href="/results/" class="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--usag-red)] hover:underline">View Results &rarr;</a>
+    </div>
+  </div>
+</section>

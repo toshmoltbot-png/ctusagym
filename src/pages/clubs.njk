@@ -1,0 +1,29 @@
+---
+layout: base.njk
+title: Clubs
+permalink: /clubs/
+description: Official directory of registered CT USA Gymnastics clubs.
+---
+
+<section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+  <h1 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Clubs Directory</h1>
+  <p class="mt-2 text-sm text-slate-600">Official directory of registered clubs. If a listing needs to be updated, please contact the State Committee.</p>
+
+  <div class="mt-8 space-y-4">
+    {% for club in clubs %}
+    <div class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+      <h2 class="text-sm font-bold text-slate-900">{{ club.name }}{% if club.note %} <span class="text-xs font-normal text-slate-500">({{ club.note }})</span>{% endif %}</h2>
+      {% if club.address %}
+      <div class="mt-2 space-y-1 text-xs text-slate-600">
+        <div>{{ club.address }}</div>
+        <div>{{ club.city }}, {{ club.state }} {{ club.zip }}</div>
+        {% if club.phone %}<div>{{ club.phone }}</div>{% endif %}
+        {% if club.website %}<div><a href="https://{{ club.website }}" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900" target="_blank" rel="noopener">{{ club.website }}</a></div>{% endif %}
+        {% if club.email %}<div><a href="mailto:{{ club.email }}" class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900">{{ club.email }}</a></div>{% endif %}
+        {% if club.contact %}<div>Att: {{ club.contact }}</div>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</section>

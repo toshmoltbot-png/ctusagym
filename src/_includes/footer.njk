@@ -1,0 +1,26 @@
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <div class="grid gap-8 md:grid-cols-3">
+      <div>
+        <div class="text-sm font-semibold text-slate-900">{{ site.title }}</div>
+        <p class="mt-2 text-sm text-slate-600">{{ site.footer_tagline }}</p>
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-slate-900">SafeSport</div>
+        <p class="mt-2 text-sm text-slate-600">If you suspect abuse, please follow USA Gymnastics SafeSport reporting guidance.</p>
+        <a href="/safesport" class="mt-3 inline-flex text-sm font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900">SafeSport resources</a>
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-slate-900">Contacts</div>
+        <ul class="mt-2 space-y-2 text-sm text-slate-600">
+          <li>State Chairman: <span class="font-medium text-slate-800">{{ site.chairman_name }}</span></li>
+          <li><a class="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900" href="mailto:{{ site.chairman_email }}">{{ site.chairman_email }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <div>&copy; {{ site.copyright_year }} {{ site.title }}</div>
+      <div>Built for clarity, speed, and mobile-first meet-day utility.</div>
+    </div>
+  </div>
+</footer>

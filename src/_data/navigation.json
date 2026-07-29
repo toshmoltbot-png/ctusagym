@@ -1,0 +1,15 @@
+{
+  "main": [
+    { "label": "Home", "url": "/" },
+    { "label": "Calendar", "url": "/calendar/" },
+    { "label": "Events", "url": "/events/" },
+    { "label": "State Meets", "url": "/state-meets/" },
+    { "label": "Results", "url": "/results/" },
+    { "label": "Forms & Docs", "url": "/resources/" },
+    { "label": "USAGym", "url": "/programs/" },
+    { "label": "Policies", "url": "/policies/" },
+    { "label": "Clubs", "url": "/clubs/" },
+    { "label": "SafeSport", "url": "/safesport/" },
+    { "label": "About", "url": "/about/" }
+  ]
+}
