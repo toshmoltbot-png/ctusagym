@@ -3,6 +3,7 @@
     "year": 2025,
     "title": "Class of 2025",
     "photo": "",
+    "dropbox": "",
     "inductees": [
       { "name": "TBA", "bio": "" }
     ]
@@ -11,6 +12,8 @@
     "year": 2023,
     "title": "Class of 2023",
     "photo": "/images/photos/2023_HOF_Robin__Ashley_and_Justin_large.jpg",
+    "extra_photos": ["/images/photos/HOF_AA_Champs_large.jpg"],
+    "dropbox": "https://www.dropbox.com/sh/b007xusw2fedtrf/AAAcjQ-EtENHZW5s48v9AJzXa?dl=0",
     "inductees": [
       { "name": "Robin", "bio": "" },
       { "name": "Ashley", "bio": "" },
@@ -21,6 +24,7 @@
     "year": 2022,
     "title": "Class of 2022",
     "photo": "/images/photos/HOF_Inductees_large.jpg",
+    "dropbox": "https://www.dropbox.com/scl/fo/bwxi3hw3veejmmtlj7ze8/ADxEpyse7ERqxN4-agfvxjw?rlkey=c4fceqdg7dzs2noc0j0dnpiut&dl=0",
     "inductees": [
       {
         "name": "John Cheng",
@@ -40,6 +44,7 @@
     "year": 2019,
     "title": "Class of 2019",
     "photo": "/images/photos/Byron__Linda__Chris.jpeg_large.jpg",
+    "dropbox": "https://www.dropbox.com/sh/mwjt2qnfkiuprbk/AADXfc-s6_8NaEvHLtWZR24wa?dl=0",
     "inductees": [
       { "name": "Linda Briggs", "bio": "" },
       { "name": "Byron Knox", "bio": "" },
@@ -50,6 +55,7 @@
     "year": 2018,
     "title": "Class of 2018",
     "photo": "",
+    "dropbox": "https://www.dropbox.com/sh/tuqk21uy0645yqp/AABx1wSvG6oUYtmg3Px6ntPZa?dl=0",
     "inductees": [
       { "name": "John Crosby", "bio": "" },
       { "name": "Polly DellaGioia Brueggestrat", "bio": "" },
@@ -60,6 +66,7 @@
     "year": 2017,
     "title": "Class of 2017",
     "photo": "",
+    "dropbox": "https://www.dropbox.com/sh/gx9cdx5lup8aztf/AAA8-cqNN7fhzw7n5VSxtUFoa?dl=0",
     "inductees": [
       { "name": "Peter Kormann", "bio": "" },
       { "name": "Sandy Gunarrson Thielz", "bio": "" },
@@ -70,6 +77,7 @@
     "year": 2016,
     "title": "Class of 2016",
     "photo": "",
+    "dropbox": "http://tinyurl.com/CT-USAG-HOF",
     "inductees": [
       { "name": "Carolyn Hacker Kohn", "bio": "" },
       { "name": "Connie Maloney", "bio": "" },
@@ -80,6 +88,7 @@
     "year": 2015,
     "title": "Class of 2015",
     "photo": "",
+    "dropbox": "",
     "inductees": [
       { "name": "Doris Fuchs Brause", "bio": "" },
       { "name": "Leslie Russo Misener", "bio": "" },
