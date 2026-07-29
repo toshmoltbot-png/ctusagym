@@ -3,8 +3,16 @@
     "year": 2025,
     "title": "2025",
     "inductees": [
-      { "name": "Lorraine Scaviola Duffy", "note": "", "bio": "" },
-      { "name": "Cheryl Weatherstone-Vance", "note": "", "bio": "" }
+      {
+        "name": "Lorraine Scaviola Duffy",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Cheryl Weatherstone-Vance",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "2025 Hall of Fame Photos",
     "gallery_href": "#hof-2025-photos",
@@ -14,11 +22,25 @@
     "year": 2023,
     "title": "2023",
     "inductees": [
-      { "name": "Class of 2023", "note": "Official list of names pending update. If you have the official list, we can add it here.", "bio": "" }
+      {
+        "name": "Robin",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Ashley",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Justin",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "2023 Hall of Fame Photos (Dropbox)",
     "gallery_href": "https://www.dropbox.com/sh/b007xusw2fedtrf/AAAcjQ-EtENHZW5s48v9AJzXa?dl=0",
-    "gallery_desc": "Dropbox link from the Hall of Fame content."
+    "gallery_desc": "Ceremony and All Around Champions photos."
   },
   {
     "year": 2022,
@@ -48,9 +70,21 @@
     "year": 2019,
     "title": "2019",
     "inductees": [
-      { "name": "Linda Briggs", "note": "", "bio": "" },
-      { "name": "Byron Knox", "note": "", "bio": "" },
-      { "name": "Christopher Moon", "note": "", "bio": "" }
+      {
+        "name": "Linda Briggs",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Byron Knox",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Christopher Moon",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "Hall of Fame Photos 2019 (Dropbox)",
     "gallery_href": "https://www.dropbox.com/sh/mwjt2qnfkiuprbk/AADXfc-s6_8NaEvHLtWZR24wa?dl=0",
@@ -60,9 +94,21 @@
     "year": 2018,
     "title": "2018",
     "inductees": [
-      { "name": "John Crosby", "note": "", "bio": "" },
-      { "name": "Polly DellaGioia Brueggestrat", "note": "", "bio": "" },
-      { "name": "Karen Schuckman", "note": "", "bio": "" }
+      {
+        "name": "John Crosby",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Polly DellaGioia Brueggestrat",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Karen Schuckman",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "Class of 2018 Hall of Fame Photos (Dropbox)",
     "gallery_href": "https://www.dropbox.com/sh/tuqk21uy0645yqp/AABx1wSvG6oUYtmg3Px6ntPZa?dl=0",
@@ -72,9 +118,21 @@
     "year": 2017,
     "title": "2017",
     "inductees": [
-      { "name": "Peter Kormann", "note": "", "bio": "" },
-      { "name": "Sandy Gunarrson Thielz", "note": "", "bio": "" },
-      { "name": "Cole Dowaliby Riley", "note": "", "bio": "" }
+      {
+        "name": "Peter Kormann",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Sandy Gunarrson Thielz",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Cole Dowaliby Riley",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "Hall of Fame Pictures 2017 (Dropbox)",
     "gallery_href": "https://www.dropbox.com/sh/gx9cdx5lup8aztf/AAA8-cqNN7fhzw7n5VSxtUFoa?dl=0",
@@ -84,9 +142,21 @@
     "year": 2016,
     "title": "2016",
     "inductees": [
-      { "name": "Carolyn Hacker Kohn", "note": "", "bio": "" },
-      { "name": "Connie Maloney", "note": "", "bio": "" },
-      { "name": "Pat Panichas", "note": "", "bio": "" }
+      {
+        "name": "Carolyn Hacker Kohn",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Connie Maloney",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Pat Panichas",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "Hall of Fame 2016 (Dropbox)",
     "gallery_href": "http://tinyurl.com/CT-USAG-HOF",
@@ -96,10 +166,65 @@
     "year": 2015,
     "title": "2015",
     "inductees": [
-      { "name": "Doris Fuchs Brause", "note": "", "bio": "" },
-      { "name": "Leslie Russo Misener", "note": "", "bio": "" },
-      { "name": "Barbara Tonry", "note": "", "bio": "" },
-      { "name": "Don Tonry", "note": "", "bio": "" }
+      {
+        "name": "Doris Fuchs Brause",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Leslie Russo Misener",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Barbara Tonry",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Don Tonry",
+        "note": "",
+        "bio": ""
+      }
+    ],
+    "gallery_label": "",
+    "gallery_href": "",
+    "gallery_desc": ""
+  },
+  {
+    "year": 2014,
+    "title": "2014",
+    "inductees": [
+      {
+        "name": "Ro Carlucci",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Marcia Frederick",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Abie Grossfeld",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Muriel Grossfeld",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Joan Hicks",
+        "note": "",
+        "bio": ""
+      },
+      {
+        "name": "Dick Terry",
+        "note": "",
+        "bio": ""
+      }
     ],
     "gallery_label": "",
     "gallery_href": "",
