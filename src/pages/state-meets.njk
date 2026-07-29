@@ -1,0 +1,119 @@
+---
+layout: base.njk
+title: State Meets
+permalink: /state-meets/
+description: Connecticut USA Gymnastics state championship meet details — schedules, session times, warm-up info, entry deadlines, and results for all levels and Xcel divisions.
+---
+
+<section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div>
+      <h1 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">State Meets</h1>
+      <p class="mt-2 text-sm text-slate-600">Dates, host clubs, locations, deadlines, fees, and session schedules for Connecticut Women&rsquo;s State Meets.</p>
+    </div>
+    <a href="/events/" class="text-sm font-bold text-slate-900 hover:underline">&larr; Back to Events Hub</a>
+  </div>
+
+  {# Quick Jump Links #}
+  <div class="mt-6 flex flex-wrap gap-2">
+    <a href="#reminders" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-200">Reminders</a>
+    {% for meet in state_meets.meets %}
+    <a href="#{{ meet.id }}" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-200">{{ meet.title | truncate(30, true, "…") }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="mt-12 space-y-12">
+
+    {# Reminders #}
+    <div id="reminders" class="scroll-mt-24">
+      <h2 class="text-xl font-black text-slate-900 border-b border-slate-200 pb-2">Reminders</h2>
+      <div class="mt-4 rounded-xl border border-rose-200 bg-rose-50 p-6">
+        <h3 class="mt-0 text-lg font-bold text-rose-900">{{ state_meets.reminders.title }}</h3>
+        <p class="mt-3 text-sm text-rose-900"><strong>Late qualifiers</strong> must have their information into the State Chairman and Meet Director by <strong>{{ state_meets.reminders.lateQualifierDeadline }}</strong> to avoid a late fee.</p>
+        <p class="mt-3 text-sm text-rose-900">{{ state_meets.reminders.recommendation }}</p>
+        <h4 class="font-bold text-rose-900 mt-6 text-sm">Late Fees</h4>
+        <ul class="text-sm text-rose-900 list-disc pl-5 space-y-1 mt-2">
+          {% for fee in state_meets.reminders.lateFees %}
+          <li><strong>{{ fee.condition }}:</strong> {{ fee.fee }}</li>
+          {% endfor %}
+        </ul>
+        <p class="mt-4 text-xs font-semibold text-rose-900">{{ state_meets.reminders.note }}</p>
+      </div>
+      <div class="mt-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <h3 class="mt-0 font-bold text-slate-900">Level 10 Qualification</h3>
+        <p class="mt-2 text-sm text-slate-700">{{ state_meets.reminders.level10Note }}</p>
+      </div>
+    </div>
+
+    {# Individual Meets #}
+    {% for meet in state_meets.meets %}
+    <div id="{{ meet.id }}" class="scroll-mt-24">
+      <h2 class="text-xl font-black text-slate-900 border-b border-slate-200 pb-2">{{ meet.title }}</h2>
+      <div class="mt-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+        <p class="text-sm text-slate-700"><strong>Dates:</strong> {{ meet.dates }}</p>
+        {% if meet.host %}
+        <p class="text-sm text-slate-700"><strong>Hosted by:</strong> {{ meet.host }}</p>
+        {% endif %}
+        <p class="text-sm text-slate-700"><strong>Location:</strong> {{ meet.location }}</p>
+        {% if meet.note %}
+        <p class="mt-3 text-sm text-slate-700"><strong>Info:</strong> {{ meet.note }}</p>
+        {% endif %}
+
+        <div class="mt-5 grid gap-4 sm:grid-cols-2">
+          <div class="rounded-lg bg-slate-50 p-4">
+            <h3 class="text-sm font-bold text-slate-900">Deadlines</h3>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li><strong>Entries due:</strong> {{ meet.deadlines.entriesDue }}</li>
+              <li><strong>Postmarked by:</strong> {{ meet.deadlines.postmarkedBy }}</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-slate-50 p-4">
+            <h3 class="text-sm font-bold text-slate-900">Fees</h3>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              {% for fee in meet.fees %}
+              <li><strong>{{ fee.levels }}:</strong> {{ fee.amount }}</li>
+              {% endfor %}
+            </ul>
+            {% if meet.feesNote %}
+            <p class="mt-2 text-xs text-slate-600">{{ meet.feesNote }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="mt-5 rounded-lg border border-slate-200 bg-white p-4">
+          <h3 class="text-sm font-bold text-slate-900">Payment</h3>
+          <p class="mt-2 text-sm text-slate-700"><strong>Payable to:</strong> {{ meet.payment.payableTo }}</p>
+          <p class="mt-1 text-sm text-slate-700"><strong>Payment address:</strong> {{ meet.payment.address }}</p>
+        </div>
+
+        {% if meet.schedule.length %}
+        <details class="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <summary class="cursor-pointer text-sm font-bold text-slate-900">Session Schedule (tap to expand)</summary>
+          <div class="mt-4 space-y-6">
+            {% for day in meet.schedule %}
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">{{ day.day }}</h4>
+              <div class="mt-3 space-y-4 text-sm text-slate-700">
+                {% for session in day.sessions %}
+                <div>
+                  <p class="font-semibold">{{ session.name }} — {{ session.groups }}</p>
+                  <ul class="mt-1 list-disc pl-5">
+                    {% for time in session.times %}
+                    <li>{{ time }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </details>
+        {% endif %}
+
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section>
