@@ -2,106 +2,115 @@
 layout: base.njk
 title: Hall of Fame
 permalink: /hall-of-fame/
-description: CT USA Gymnastics Hall of Fame — honoring outstanding contributions to Connecticut gymnastics.
+description: Connecticut Women's USA Gymnastics Hall of Fame inductees, ceremony photos, Wall of Remembrance, and season highlight gallery.
 ---
 
-{# Hero Banner #}
-<section class="border-b border-slate-200 bg-white">
-  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-14">
-    <div class="flex flex-col items-center text-center">
-      <img src="/images/photos/Hall_of_fame_LOGO_small.png" alt="CT USAG Hall of Fame" class="h-24 w-auto sm:h-28">
-      <h1 class="mt-5 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Connecticut Gymnastics Hall of Fame</h1>
-      <p class="mt-2 max-w-xl text-sm text-slate-600">Honoring individuals who have made outstanding contributions to the sport of gymnastics in Connecticut.</p>
+<section class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+  <h1 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Hall of Fame</h1>
+  <p class="mt-2 text-sm text-slate-600">Honoring the individuals who have shaped Connecticut gymnastics.</p>
+
+  {# 2025 Hero Photo #}
+  <div class="mt-8 overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+    <img src="/images/photos/2025-all-around-champions.jpg" alt="2025 USA Gymnastics All Around Champions" class="aspect-[16/9] w-full object-cover" loading="eager">
+    <div class="bg-white px-5 py-3">
+      <p class="text-sm font-black text-slate-900">Congratulations to the Class of 2025</p>
+      <p class="text-xs text-slate-600">2025 USA Gymnastics All Around Champions</p>
     </div>
   </div>
-</section>
 
-<section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-  <div class="space-y-8">
-    {% for classYear in hall_of_fame %}
+  <div class="mt-8 grid gap-6 lg:grid-cols-3">
+    {# Main column: Hall of Fame Classes #}
+    <section class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm lg:col-span-2">
+      <h2 class="text-sm font-black tracking-wide text-slate-900">Hall of Fame Classes</h2>
 
-    <div class="rounded-xl border border-slate-200 bg-white shadow-sm overflow-hidden">
-      {% if classYear.photo %}
-      {# Card with photo #}
-      <div class="sm:flex">
-        <div class="sm:w-2/5 flex-shrink-0">
-          <img src="{{ classYear.photo }}" alt="{{ classYear.title }}" class="aspect-[4/3] w-full object-cover" loading="lazy">
-        </div>
-        <div class="flex flex-col justify-center p-6 sm:w-3/5">
-          <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[color:var(--usag-red)]">Inducted</p>
-          <h2 class="mt-1 text-xl font-black text-slate-900">{{ classYear.title }}</h2>
-          <ul class="mt-3 space-y-1">
+      <div class="mt-5 space-y-6">
+        {% for classYear in hall_of_fame %}
+        <div>
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div class="text-sm font-extrabold text-slate-900">{{ classYear.title }}</div>
+            {% if classYear.gallery_label %}
+            <a href="{{ classYear.gallery_href }}" class="text-xs font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900" {% if classYear.gallery_href != '#hof-2025-photos' %}target="_blank" rel="noopener"{% endif %}>
+              &nearr; {{ classYear.gallery_label }}
+            </a>
+            {% endif %}
+          </div>
+
+          <ul class="mt-2 space-y-2">
             {% for inductee in classYear.inductees %}
-            <li class="text-sm text-slate-700">{{ inductee.name }}</li>
+            <li class="rounded-lg border border-slate-200 p-4">
+              <div class="text-sm font-bold text-slate-900">{{ inductee.name }}</div>
+              {% if inductee.note %}<div class="mt-1 text-xs text-slate-600">{{ inductee.note }}</div>{% endif %}
+              {% if inductee.bio and inductee.bio | length > 50 %}
+              <details class="mt-3">
+                <summary class="cursor-pointer text-xs font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900">
+                  &#9656; Read {{ inductee.name }}&rsquo;s Biography
+                </summary>
+                <div class="mt-3 rounded-md bg-slate-50 p-4 text-xs leading-relaxed text-slate-700">{{ inductee.bio }}</div>
+              </details>
+              {% endif %}
+            </li>
             {% endfor %}
           </ul>
-          {% if classYear.dropbox %}
-          <a href="{{ classYear.dropbox }}" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-[color:var(--usag-red)] hover:underline" target="_blank" rel="noopener">View Photos &rarr;</a>
+
+          {% if classYear.gallery_desc %}
+          <div class="mt-2 text-xs text-slate-500">{{ classYear.gallery_desc }}</div>
           {% endif %}
-        </div>
-      </div>
-      {# Extra photos #}
-      {% if classYear.extra_photos %}
-      <div class="border-t border-slate-200 grid grid-cols-2 gap-px bg-slate-200">
-        {% for photo in classYear.extra_photos %}
-        <div class="bg-white">
-          <img src="{{ photo }}" alt="{{ classYear.title }}" class="w-full object-cover aspect-[16/9]" loading="lazy">
         </div>
         {% endfor %}
       </div>
-      {% endif %}
-      {% else %}
-      {# Card without photo #}
-      <div class="p-6">
-        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[color:var(--usag-red)]">Inducted</p>
-        <h2 class="mt-1 text-xl font-black text-slate-900">{{ classYear.title }}</h2>
-        <ul class="mt-3 space-y-1">
-          {% for inductee in classYear.inductees %}
-          <li class="text-sm text-slate-700">{{ inductee.name }}</li>
+    </section>
+
+    {# Sidebar #}
+    <aside class="space-y-6">
+      {# Additional Galleries #}
+      <section class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 class="text-sm font-black tracking-wide text-slate-900">Additional Galleries</h2>
+        <ul class="mt-4 space-y-3">
+          <li>
+            <a href="https://www.dropbox.com/scl/fo/bwxi3hw3veejmmtlj7ze8/ADxEpyse7ERqxN4-agfvxjw?rlkey=c4fceqdg7dzs2noc0j0dnpiut&dl=0" class="text-sm font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900" target="_blank" rel="noopener">2024 Hall of Fame Ceremony Photos (Dropbox)</a>
+            <div class="mt-1 text-xs text-slate-600">Photos from the 2024 Hall of Fame Ceremony.</div>
+          </li>
+        </ul>
+      </section>
+
+      {# Wall of Remembrance #}
+      <section class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h2 class="text-sm font-black tracking-wide text-slate-900">Wall of Remembrance</h2>
+        <p class="mt-2 text-sm text-slate-600">In memory of members of our gymnastics community.</p>
+
+        <ul class="mt-4 space-y-3">
+          {% for person in wall_of_remembrance %}
+          <li class="rounded-lg border border-slate-200 p-4">
+            <div class="text-sm font-bold text-slate-900">{{ person.name }}</div>
+            {% if person.years %}<div class="mt-1 text-xs font-semibold text-slate-600">{{ person.years }}</div>{% endif %}
+            <p class="mt-2 text-xs text-slate-600">{{ person.tribute }}</p>
+            {% if person.link %}
+            <a href="{{ person.link }}" class="mt-2 inline-block text-xs font-semibold text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900" target="_blank" rel="noopener">&nearr; {{ person.link_label }}</a>
+            {% endif %}
+          </li>
           {% endfor %}
         </ul>
-        {% if classYear.dropbox %}
-        <a href="{{ classYear.dropbox }}" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-[color:var(--usag-red)] hover:underline" target="_blank" rel="noopener">View Photos &rarr;</a>
-        {% endif %}
-      </div>
-      {% endif %}
-
-      {# Expandable bios #}
-      {% for inductee in classYear.inductees %}
-        {% if inductee.bio and inductee.bio | length > 50 %}
-        <div class="border-t border-slate-200">
-          <details class="group">
-            <summary class="flex cursor-pointer items-center justify-between px-6 py-3.5 transition hover:bg-blue-50">
-              <span class="text-sm font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 group-hover:decoration-blue-700">Read {{ inductee.name }}&rsquo;s Biography</span>
-              <svg class="h-4 w-4 flex-shrink-0 text-blue-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
-            </summary>
-            <div class="border-t border-slate-100 bg-slate-50 px-6 py-5">
-              <p class="max-w-3xl text-sm leading-7 text-slate-700">{{ inductee.bio }}</p>
-            </div>
-          </details>
-        </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    {% endfor %}
+      </section>
+    </aside>
   </div>
 
-  {# Wall of Remembrance #}
-  <div class="mt-16">
-    <h2 class="text-2xl font-black tracking-tight text-slate-900 text-center">Wall of Remembrance</h2>
-    <p class="mt-2 text-sm text-slate-600 text-center">In loving memory of those who gave so much to Connecticut gymnastics.</p>
-    <div class="mt-8 space-y-4">
-      {% for person in wall_of_remembrance %}
-      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="text-sm font-black text-slate-900">{{ person.name }}</h3>
-          <span class="text-xs font-semibold text-slate-500 flex-shrink-0">{{ person.years }}</span>
+  {# 2025 Season Highlights Photo Gallery #}
+  <div id="hof-2025-photos" class="mt-10 scroll-mt-24">
+    <h2 class="text-xl font-black tracking-tight text-slate-900">2025 Season Highlights</h2>
+    <p class="mt-2 text-sm text-slate-600">Awards and recognition from the 2025 season.</p>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {% set highlights = [
+        { "src": "/images/photos/revel-xcel-club-of-year-2025.jpg", "alt": "Revel Gymnastics - 2025 CT Xcel Club of the Year", "caption": "Congratulations to Revel Gymnastics, 2025 CT Xcel Club of the Year!" },
+        { "src": "/images/photos/region6-xcel-club-2025.jpg", "alt": "Region 6 Xcel Club of the Year - Bath YMCA (ME)", "caption": "Region 6 Xcel Club of the Year: Bath YMCA (ME)" },
+        { "src": "/images/photos/region6-dev-clubs-2025.jpg", "alt": "Region 6 Dev Clubs of the Year", "caption": "Region 6 Dev Clubs of the Year: MSGA (MA) and Galaxy (NY)" },
+        { "src": "/images/photos/region6-service-award-2025.jpg", "alt": "Region 6 Service Award - John Cheng", "caption": "Region 6 Service Award: John Cheng" }
+      ] %}
+      {% for photo in highlights %}
+      <div class="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
+        <img src="{{ photo.src }}" alt="{{ photo.alt }}" class="aspect-[4/3] w-full object-cover object-top" loading="lazy">
+        <div class="p-4">
+          <p class="text-sm font-semibold text-slate-800">{{ photo.caption }}</p>
         </div>
-        <p class="mt-2 text-sm leading-6 text-slate-600">{{ person.tribute }}</p>
-        {% if person.link %}
-        <a href="{{ person.link }}" class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-[color:var(--usag-red)] hover:underline" target="_blank" rel="noopener">{{ person.link_label }} &rarr;</a>
-        {% endif %}
       </div>
       {% endfor %}
     </div>
