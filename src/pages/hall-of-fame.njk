@@ -13,7 +13,7 @@ description: CT USA Gymnastics Hall of Fame — honoring outstanding contributio
   </div>
 
   <div class="mt-12 space-y-12">
-    {% for classYear in hall_of_fame %}
+    {% for classYear in hall_of_fame | reverse %}
     <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
       <h2 class="text-xl font-black text-slate-900">{{ classYear.title }}</h2>
 

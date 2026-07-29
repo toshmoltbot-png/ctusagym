@@ -7,7 +7,7 @@
       </a>
       <nav class="hidden items-center xl:flex xl:gap-1" aria-label="Primary">
         {% for item in navigation.main %}
-        <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-2 lg:px-3 py-2 text-sm font-semibold transition {% if page.url == item.url %}bg-slate-900 text-white{% else %}text-slate-700 hover:bg-slate-100 hover:text-slate-900{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+        <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-1.5 lg:px-2 py-2 text-[13px] font-semibold transition {% if page.url == item.url %}bg-slate-900 text-white{% else %}text-slate-700 hover:bg-slate-100 hover:text-slate-900{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
           {{ item.label }}
         </a>
         {% endfor %}
