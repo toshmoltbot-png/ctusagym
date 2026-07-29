@@ -1,0 +1,78 @@
+---
+layout: base.njk
+title: News & Announcements
+permalink: /news/
+description: Connecticut Women's USA Gymnastics news, updates, announcements, awards, and archived content.
+---
+
+{# Hero Banner #}
+<section class="border-b border-slate-200 bg-white">
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-14">
+    <div class="max-w-3xl">
+      <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[color:var(--usag-red)]">Stay Informed</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">News &amp; Announcements</h1>
+      <p class="mt-4 text-base leading-7 text-slate-600">The latest updates from Connecticut Women&rsquo;s USA Gymnastics, including state news, Region 6 updates, awards, and event announcements.</p>
+    </div>
+  </div>
+</section>
+
+{# Current Announcements #}
+<section class="bg-slate-50">
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-16">
+    <h2 class="text-xl font-black text-slate-950">Current Announcements</h2>
+    <div class="mt-6 space-y-4">
+      {% for item in announcements %}
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-semibold text-slate-500">{{ item.date }}</span>
+          {% if item.category %}
+          <span class="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-slate-600">{{ item.category }}</span>
+          {% endif %}
+        </div>
+        <h3 class="mt-2 text-base font-bold text-slate-900">{{ item.title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ item.description }}</p>
+        {% if item.link %}
+        <a href="{{ item.link }}" class="mt-2 inline-flex text-sm font-bold text-[color:var(--usag-red)] hover:underline">Learn more &rarr;</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    {# News Categories #}
+    <h2 class="mt-16 text-xl font-black text-slate-950">News Categories</h2>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">CT State News</h3>
+        <p class="mt-1 text-sm text-slate-600">State-level gymnastics updates, committee decisions, and policy changes.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">Region 6 News</h3>
+        <p class="mt-1 text-sm text-slate-600">Updates from USAG Region 6 (CT, MA, RI, NY, VT, NH, ME).</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">USAG Updates</h3>
+        <p class="mt-1 text-sm text-slate-600">National USA Gymnastics member services and program updates.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">Hall of Fame</h3>
+        <p class="mt-1 text-sm text-slate-600">Induction announcements and ceremony coverage.</p>
+        <a href="/hall-of-fame/" class="mt-2 inline-flex text-sm font-bold text-[color:var(--usag-red)] hover:underline">View Hall of Fame &rarr;</a>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">Awards</h3>
+        <p class="mt-1 text-sm text-slate-600">Club of the Year, Service Awards, and special recognitions.</p>
+      </div>
+      <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+        <h3 class="font-bold text-slate-900">Results</h3>
+        <p class="mt-1 text-sm text-slate-600">State championship and invitational results.</p>
+        <a href="/results/" class="mt-2 inline-flex text-sm font-bold text-[color:var(--usag-red)] hover:underline">View Results &rarr;</a>
+      </div>
+    </div>
+
+    {# Archive Notice #}
+    <div class="mt-12 rounded-xl border border-amber-200 bg-amber-50 p-5">
+      <h3 class="font-bold text-amber-900">Looking for older news?</h3>
+      <p class="mt-1 text-sm text-amber-800">Historical news articles, Club of the Year announcements, and Service Awards from the SportsEngine era are being migrated. For archived articles, visit <a href="https://www.ctusagym.org/page/show/3631988-home" class="font-bold underline hover:text-amber-900">ctusagym.org</a>.</p>
+    </div>
+  </div>
+</section>

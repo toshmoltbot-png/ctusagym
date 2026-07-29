@@ -2,22 +2,29 @@
   {
     "date": "Jul 2026",
     "category": "general",
-    "title": "Website Migration to CloudCannon",
-    "description": "The CT USAG website is transitioning to a new platform for easier content management.",
-    "link": ""
+    "title": "2025 All Around Champions",
+    "description": "Congratulations to all Connecticut athletes who competed at the 2025 State Championships. View full results on the Results page.",
+    "link": "/results/"
   },
   {
-    "date": "Sep 2025",
+    "date": "Jul 2026",
+    "category": "general",
+    "title": "2025 Hall of Fame Inductees",
+    "description": "Congratulations to Lorraine Scaviola Duffy and Cheryl Weatherstone-Vance, the Class of 2025 inductees.",
+    "link": "/hall-of-fame/"
+  },
+  {
+    "date": "Jan 2026",
     "category": "forms",
-    "title": "2026 State Championship Bid Form",
-    "description": "State Championship bid form is posted (deadline: September 22, 2025) (deadline passed).",
+    "title": "State Championship Bid Forms",
+    "description": "Bid forms for hosting state championships are posted annually each fall. Check back for 2026-2027 season forms.",
     "link": ""
   },
   {
-    "date": "Aug 2024",
+    "date": "Jan 2026",
     "category": "forms",
     "title": "Host a Meet Request (Calendar Approval Form)",
-    "description": "Use the official Google Form to request calendar approval to host a meet (2025-2026 season).",
+    "description": "Use the official Google Form to request calendar approval to host a meet.",
     "link": "https://docs.google.com/forms/d/e/1FAIpQLSeQQ8WunFI8q7MDlUNaI-QsUg9RwaNwFV2iT7SuKNNIRtl-TQ/viewform?usp=sf_link"
   },
   {

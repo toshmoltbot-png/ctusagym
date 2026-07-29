@@ -9,7 +9,9 @@
     { "label": "USAGym", "url": "/programs/" },
     { "label": "Policies", "url": "/policies/" },
     { "label": "Clubs", "url": "/clubs/" },
+    { "label": "Judges", "url": "/judges/" },
     { "label": "SafeSport", "url": "/safesport/" },
+    { "label": "News", "url": "/news/" },
     { "label": "Hall of Fame", "url": "/hall-of-fame/" },
     { "label": "About", "url": "/about/" }
   ]
