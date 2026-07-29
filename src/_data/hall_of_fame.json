@@ -4,7 +4,7 @@
     "title": "Class of 2025",
     "photo": "",
     "inductees": [
-      { "name": "TBA", "bio": "2025 Hall of Fame class details to be announced." }
+      { "name": "TBA", "bio": "" }
     ]
   },
   {
@@ -41,9 +41,50 @@
     "title": "Class of 2019",
     "photo": "/images/photos/Byron__Linda__Chris.jpeg_large.jpg",
     "inductees": [
-      { "name": "Byron", "bio": "" },
-      { "name": "Linda", "bio": "" },
-      { "name": "Chris", "bio": "" }
+      { "name": "Linda Briggs", "bio": "" },
+      { "name": "Byron Knox", "bio": "" },
+      { "name": "Christopher Moon", "bio": "" }
+    ]
+  },
+  {
+    "year": 2018,
+    "title": "Class of 2018",
+    "photo": "",
+    "inductees": [
+      { "name": "John Crosby", "bio": "" },
+      { "name": "Polly DellaGioia Brueggestrat", "bio": "" },
+      { "name": "Karen Schuckman", "bio": "" }
+    ]
+  },
+  {
+    "year": 2017,
+    "title": "Class of 2017",
+    "photo": "",
+    "inductees": [
+      { "name": "Peter Kormann", "bio": "" },
+      { "name": "Sandy Gunarrson Thielz", "bio": "" },
+      { "name": "Cole Dowaliby Riley", "bio": "" }
+    ]
+  },
+  {
+    "year": 2016,
+    "title": "Class of 2016",
+    "photo": "",
+    "inductees": [
+      { "name": "Carolyn Hacker Kohn", "bio": "" },
+      { "name": "Connie Maloney", "bio": "" },
+      { "name": "Pat Panichas", "bio": "" }
+    ]
+  },
+  {
+    "year": 2015,
+    "title": "Class of 2015",
+    "photo": "",
+    "inductees": [
+      { "name": "Doris Fuchs Brause", "bio": "" },
+      { "name": "Leslie Russo Misener", "bio": "" },
+      { "name": "Barbara Tonry", "bio": "" },
+      { "name": "Don Tonry", "bio": "" }
     ]
   }
 ]
