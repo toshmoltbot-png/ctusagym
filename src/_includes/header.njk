@@ -39,17 +39,9 @@
     </div>
     <nav class="-mx-2 flex gap-2 overflow-x-auto border-t border-slate-100 px-2 py-2 xl:hidden" aria-label="Primary">
       {% for item in navigation.main %}
-        {% if item.children %}
-          {% for child in item.children %}
-          <a href="{{ child.url }}" class="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold {% if page.url == child.url %}bg-slate-900 text-white{% else %}bg-slate-100 text-slate-800{% endif %}"{% if page.url == child.url %} aria-current="page"{% endif %}>
-            {{ child.label }}
-          </a>
-          {% endfor %}
-        {% else %}
-        <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold {% if page.url == item.url %}bg-slate-900 text-white{% else %}bg-slate-100 text-slate-800{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
-          {{ item.label }}
-        </a>
-        {% endif %}
+      <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold {% if page.url == item.url %}bg-slate-900 text-white{% else %}bg-slate-100 text-slate-800{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
+        {{ item.label }}
+      </a>
       {% endfor %}
     </nav>
   </div>
