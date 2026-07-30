@@ -1,11 +1,13 @@
 <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="flex h-16 items-center justify-between gap-6">
+    <div class="flex h-16 items-center justify-between gap-4">
       <a href="/" class="flex shrink-0 items-center gap-3">
         <img src="/images/ct-usag-logo-clr-horiz.png" width="4273" height="589" alt="Connecticut USA Gymnastics" class="h-auto w-[220px] max-w-[55vw] shrink-0" loading="eager" decoding="async">
         <span class="sr-only">Connecticut Women's USA Gymnastics</span>
       </a>
-      <nav class="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
+
+      <!-- Desktop nav (1536px+) -->
+      <nav class="hidden items-center gap-0.5 2xl:flex" aria-label="Primary">
         {% for item in navigation.main %}
           {% if item.children %}
           <div class="nav-dropdown relative">
@@ -33,16 +35,44 @@
           {% endif %}
         {% endfor %}
       </nav>
+
+      <!-- Right side -->
       <div class="flex items-center gap-2">
-        <a href="/resources/" class="inline-flex items-center rounded-md bg-[color:var(--usag-red)] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[color:var(--usag-red)] focus:ring-offset-2">Quick Links</a>
+        <a href="/resources/" class="inline-flex items-center rounded-md bg-[color:var(--usag-red)] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95">Quick Links</a>
+        <button
+          id="hamburger-toggle"
+          class="inline-flex items-center justify-center rounded-md p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 2xl:hidden"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <svg id="hamburger-open" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="hamburger-close" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
       </div>
     </div>
-    <nav class="-mx-2 flex gap-2 overflow-x-auto border-t border-slate-100 px-2 py-2 xl:hidden" aria-label="Primary">
-      {% for item in navigation.main %}
-      <a href="{{ item.url }}" class="whitespace-nowrap rounded-md px-3 py-2 text-sm font-semibold {% if page.url == item.url %}bg-slate-900 text-white{% else %}bg-slate-100 text-slate-800{% endif %}"{% if page.url == item.url %} aria-current="page"{% endif %}>
-        {{ item.label }}
-      </a>
-      {% endfor %}
+
+    <!-- Mobile/tablet slide-down menu -->
+    <nav id="mobile-nav" class="hidden border-t border-slate-100 py-3 2xl:hidden" aria-label="Mobile navigation">
+      <div class="space-y-1">
+        {% for item in navigation.main %}
+          {% if item.children %}
+          <a href="{{ item.url }}" class="block rounded-md px-3 py-2 text-sm font-bold transition {% if page.url == item.url %}bg-slate-900 text-white{% else %}text-slate-900 hover:bg-slate-100{% endif %}">
+            {{ item.label }}
+          </a>
+          <div class="ml-4 mt-1 space-y-0.5 border-l-2 border-slate-200 pl-3">
+            {% for child in item.children %}
+            <a href="{{ child.url }}" class="block rounded-md px-3 py-1.5 text-sm transition {% if page.url == child.url %}font-bold text-slate-900{% else %}text-slate-600 hover:bg-slate-50 hover:text-slate-900{% endif %}">
+              {{ child.label }}
+            </a>
+            {% endfor %}
+          </div>
+          {% else %}
+          <a href="{{ item.url }}" class="block rounded-md px-3 py-2 text-sm font-bold transition {% if page.url == item.url %}bg-slate-900 text-white{% else %}text-slate-900 hover:bg-slate-100{% endif %}">
+            {{ item.label }}
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
     </nav>
   </div>
 </header>
@@ -53,3 +83,17 @@
     display: block;
   }
 </style>
+
+<script>
+  const hamburger = document.getElementById('hamburger-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const openIcon = document.getElementById('hamburger-open');
+  const closeIcon = document.getElementById('hamburger-close');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.toggle('hidden') === false;
+    openIcon?.classList.toggle('hidden', isOpen);
+    closeIcon?.classList.toggle('hidden', !isOpen);
+    hamburger?.setAttribute('aria-expanded', String(isOpen));
+  });
+</script>
