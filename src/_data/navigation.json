@@ -1,19 +1,31 @@
 {
   "main": [
     { "label": "Home", "url": "/" },
-    { "label": "Calendar", "url": "/calendar/" },
-    { "label": "Events", "url": "/events/" },
-    { "label": "State Meets", "url": "/state-meets/" },
+    {
+      "label": "Season", "url": "/calendar/", "children": [
+        { "label": "Calendar", "url": "/calendar/" },
+        { "label": "Events Hub", "url": "/events/" },
+        { "label": "State Meets", "url": "/state-meets/" }
+      ]
+    },
     { "label": "Results", "url": "/results/" },
-    { "label": "Forms & Docs", "url": "/resources/" },
-    { "label": "ProScore", "url": "/proscore/" },
-    { "label": "USAGym", "url": "/programs/" },
-    { "label": "Policies", "url": "/policies/" },
-    { "label": "Clubs", "url": "/clubs/" },
-    { "label": "Judges", "url": "/judges/" },
+    {
+      "label": "Resources", "url": "/resources/", "children": [
+        { "label": "Forms & Docs", "url": "/resources/" },
+        { "label": "ProScore", "url": "/proscore/" },
+        { "label": "USAGym", "url": "/programs/" },
+        { "label": "Policies", "url": "/policies/" }
+      ]
+    },
+    {
+      "label": "Community", "url": "/clubs/", "children": [
+        { "label": "Clubs", "url": "/clubs/" },
+        { "label": "Judges", "url": "/judges/" },
+        { "label": "Hall of Fame", "url": "/hall-of-fame/" },
+        { "label": "News", "url": "/news/" }
+      ]
+    },
     { "label": "SafeSport", "url": "/safesport/" },
-    { "label": "News", "url": "/news/" },
-    { "label": "Hall of Fame", "url": "/hall-of-fame/" },
     { "label": "About", "url": "/about/" }
   ]
 }
