@@ -6,8 +6,8 @@
         <span class="sr-only">Connecticut Women's USA Gymnastics</span>
       </a>
 
-      <!-- Desktop nav (1536px+) -->
-      <nav class="hidden items-center gap-0.5 2xl:flex" aria-label="Primary">
+      <!-- Desktop nav (1280px+) -->
+      <nav class="hidden items-center gap-0.5 xl:flex" aria-label="Primary">
         {% for item in navigation.main %}
           {% if item.children %}
           <div class="nav-dropdown relative">
@@ -41,7 +41,7 @@
         <a href="/resources/" class="inline-flex items-center rounded-md bg-[color:var(--usag-red)] px-3 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-95">Quick Links</a>
         <button
           id="hamburger-toggle"
-          class="inline-flex items-center justify-center rounded-md p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 2xl:hidden"
+          class="inline-flex items-center justify-center rounded-md p-2 text-slate-600 transition hover:bg-slate-100 hover:text-slate-900 xl:hidden"
           aria-label="Menu"
           aria-expanded="false"
         >
@@ -52,7 +52,7 @@
     </div>
 
     <!-- Mobile/tablet slide-down menu -->
-    <nav id="mobile-nav" class="hidden border-t border-slate-100 py-3 2xl:hidden" aria-label="Mobile navigation">
+    <nav id="mobile-nav" class="hidden border-t border-slate-100 py-3 xl:hidden" aria-label="Mobile navigation">
       <div class="space-y-1">
         {% for item in navigation.main %}
           {% if item.children %}
