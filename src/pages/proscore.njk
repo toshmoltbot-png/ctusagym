@@ -1,0 +1,136 @@
+---
+layout: base.njk
+title: ProScore
+permalink: /proscore/
+description: ProScore software setup, gym short names, meet naming conventions, level codes, and PTF file export instructions for Connecticut meets.
+---
+
+{# Hero Banner #}
+<section class="border-b border-slate-200 bg-white">
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-14">
+    <div class="max-w-3xl">
+      <p class="text-xs font-extrabold uppercase tracking-[0.18em] text-[color:var(--usag-red)]">Scoring Software</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">ProScore</h1>
+      <p class="mt-4 text-base leading-7 text-slate-600">Setup instructions, gym short names, meet naming conventions, and file submission guidelines for Connecticut meets.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-50">
+  <div class="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:py-16">
+
+    {# Software Update #}
+    <div class="rounded-xl border border-blue-200 bg-blue-50 p-5 mb-8">
+      <h2 class="text-lg font-black text-blue-900">The 5.7.0 Update is Now Available</h2>
+      <p class="mt-2 text-sm text-blue-800">Please follow the instructions below to download and configure it.</p>
+      <a href="http://www.aegroup.com" class="mt-3 inline-flex text-sm font-bold text-blue-700 hover:underline" target="_blank" rel="noopener">ProScore on the Web &rarr;</a>
+    </div>
+
+    {# Meet Naming Convention #}
+    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-950">Entering Meet Info</h2>
+      <p class="mt-3 text-sm text-slate-700">The name of a meet you are hosting must follow this format:</p>
+      <div class="mt-3 rounded-lg bg-slate-50 p-4 font-mono text-sm text-slate-800">
+        YEAR-Month-Day (Your Gym Short Name) (Local or Invite) (Levels)
+      </div>
+      <p class="mt-3 text-sm text-slate-600"><strong>Example:</strong> <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">2021-10-15 CT-NewEra Local 4-6 &amp; XCEL</code></p>
+    </div>
+
+    {# Gym Info Note #}
+    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-950">Gym Information</h2>
+      <p class="mt-3 text-sm text-slate-700">The most important thing is that the <strong>short name MUST BE correct</strong>. There are <strong>NO SPACES</strong> in short names. The official name should be the name on the website. The rest of the info is up to you, but copying the info from the CT website would be wise.</p>
+    </div>
+
+    {# Short Names Table #}
+    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-950">Gym Short Names</h2>
+      <div class="mt-4 overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-slate-200">
+              <th class="py-2 pr-4 text-left font-bold text-slate-900">Gym Name</th>
+              <th class="py-2 text-left font-bold text-slate-900">Short Name</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-2 pr-4 text-slate-700">ABC Shoreline</td><td class="py-2 font-mono text-xs text-slate-800">CT-AbcShoreline</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Aerials Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Aerials</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Air Time Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-NEairtime</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">All Stars Gymnastics Academy</td><td class="py-2 font-mono text-xs text-slate-800">CT-AllStars</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">American Gymnastics Training Center</td><td class="py-2 font-mono text-xs text-slate-800">CT-American</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Arena Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Arena</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">CATS Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-CATS</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Chelsea Piers</td><td class="py-2 font-mono text-xs text-slate-800">CT-CPCT</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Children&rsquo;s Studio for the Performing Arts</td><td class="py-2 font-mono text-xs text-slate-800">CT-CSPA</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Connecticut Gymnastics Academy (CGA)</td><td class="py-2 font-mono text-xs text-slate-800">CT-CGA</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Darien YMCA</td><td class="py-2 font-mono text-xs text-slate-800">CT-DarienY</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Deary&rsquo;s Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Deary's</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Dunne&rsquo;s School of Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Dunne's</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">DynaMite Academy of Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Dynamite</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Elite Gymnastics Center</td><td class="py-2 font-mono text-xs text-slate-800">CT-Elite</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Farmington Valley Gym &amp; More</td><td class="py-2 font-mono text-xs text-slate-800">CT-FVG</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Farmington Valley YMCA</td><td class="py-2 font-mono text-xs text-slate-800">CT-FVYMCA</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Flip Flop Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-FlipFlop</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Frog Bridge Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-FrogBridge</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Glastonbury Gym Club</td><td class="py-2 font-mono text-xs text-slate-800">CT-Glastonbury</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Gymnastics &amp; Cheerleading Academy of CT</td><td class="py-2 font-mono text-xs text-slate-800">CT-GCA</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Gymnastics Express Too / New England Gymnastics Express</td><td class="py-2 font-mono text-xs text-slate-800">CT-NEGX</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Gymnastics Revolution</td><td class="py-2 font-mono text-xs text-slate-800">CT-GymRev</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Gymnastics School Of Connecticut</td><td class="py-2 font-mono text-xs text-slate-800">CT-GSC</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Gymnastics Training Center</td><td class="py-2 font-mono text-xs text-slate-800">CT-GTC</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">JA Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-JAG</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Kinetic Kids</td><td class="py-2 font-mono text-xs text-slate-800">CT-KineticKids</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Lakewood-Trumbull YMCA</td><td class="py-2 font-mono text-xs text-slate-800">CT-LT</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">New England School of Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-NESG</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">New Era Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-NewEra</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Next Dimension Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-NextDimension</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Northwest Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Northwest</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Premier Training Center Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-PTCG</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Sam&rsquo;s Academy of Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Sam's</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Silk City Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Silkcity</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Somersault Jungle Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-SJG</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Southington YMCA</td><td class="py-2 font-mono text-xs text-slate-800">CT-Southington</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Thames Valley Academy of Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-TVGA</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">TriTown Gymnastics Center</td><td class="py-2 font-mono text-xs text-slate-800">CT-TriTown</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Vasi&rsquo;s International Gymnastics</td><td class="py-2 font-mono text-xs text-slate-800">CT-Vasi's</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">Westport/Weston YMCA</td><td class="py-2 font-mono text-xs text-slate-800">CT-WestportY</td></tr>
+            <tr><td class="py-2 pr-4 text-slate-700">High School Gymnasts (during HS season)</td><td class="py-2 font-mono text-xs text-slate-800">CT-Unattached</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {# Level Definitions #}
+    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-950">Level Definitions</h2>
+      <p class="mt-3 text-sm text-slate-700">Levels 2, 3, 4, 5, 6, 7, 8, 9, 10, XS, XG, XP, XD</p>
+    </div>
+
+    {# PTF Export Instructions #}
+    <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm mb-8">
+      <h2 class="text-lg font-black text-slate-950">Exporting &amp; Submitting PTF Files</h2>
+      <ol class="mt-4 list-decimal list-inside space-y-2 text-sm text-slate-700">
+        <li>File</li>
+        <li>Export</li>
+        <li>ProScore Transfer File</li>
+        <li>Browse</li>
+        <li>Choose Desktop (or any folder), then name the file using the meet naming convention:<br>
+          <code class="rounded bg-slate-100 px-1.5 py-0.5 text-xs">YYYY-MM-DD CT-GymName Local 4-6&amp;PO</code></li>
+        <li>Save</li>
+        <li>Export</li>
+        <li>Right-click on the file (usually on Desktop)</li>
+        <li>Click <strong>Send to &rarr; Compressed (Zipped) Folder</strong></li>
+      </ol>
+      <div class="mt-6 rounded-lg bg-amber-50 border border-amber-200 p-4">
+        <p class="text-sm font-bold text-amber-900">Email the zipped folder to:</p>
+        <p class="mt-1 text-sm text-amber-800">
+          <a href="mailto:kimvail45@gmail.com" class="font-bold underline">kimvail45@gmail.com</a> and
+          <a href="mailto:markytino40@att.net" class="font-bold underline">markytino40@att.net</a>
+        </p>
+        <p class="mt-1 text-xs text-amber-700">Please complete this within 48 hours of your meet.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
