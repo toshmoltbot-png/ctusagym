@@ -27,6 +27,9 @@ collections_config:
     name: Homepage & News Announcements
     icon: campaign
     output: false
+    sort:
+      key: date
+      order: descending
 
   clubs:
     path: _data/clubs

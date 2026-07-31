@@ -12,9 +12,19 @@ function parseAnnouncementDate(dateStr) {
 module.exports = function() {
   const dir = path.join(__dirname, 'announcements');
   if (!fs.existsSync(dir)) return [];
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
-  const items = files.map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8')));
-  // Sort by date, newest first (order announced)
-  items.sort((a, b) => parseAnnouncementDate(b.date) - parseAnnouncementDate(a.date));
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort();
+  const items = files.map((f, i) => {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+    data._sortIndex = i; // preserve file order as tiebreaker
+    return data;
+  });
+  // Sort by date newest first; when dates match, preserve original file order
+  items.sort((a, b) => {
+    const dateDiff = parseAnnouncementDate(b.date) - parseAnnouncementDate(a.date);
+    if (dateDiff !== 0) return dateDiff;
+    return a._sortIndex - b._sortIndex;
+  });
+  // Clean up internal field
+  items.forEach(item => delete item._sortIndex);
   return items;
 };
