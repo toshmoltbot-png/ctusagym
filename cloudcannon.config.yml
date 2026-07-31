@@ -184,6 +184,26 @@ collections_config:
         - key: location
       icon: school
 
+  # === HOMEPAGE FEATURE ===
+  homepage_feature:
+    path: _data
+    name: Homepage Bottom - Featured Section
+    icon: star
+    output: false
+    glob:
+      - _data/homepage_feature.json
+    preview:
+      text:
+        - key: title
+      subtext:
+        - key: label
+      image:
+        - key: image
+      gallery:
+        image:
+          - key: image
+        fit: cover
+
   # === SITE-WIDE ===
   site_settings:
     path: _data
@@ -292,6 +312,27 @@ _inputs:
   caption:
     type: text
     label: Caption
+  label:
+    type: text
+    label: Small Text Above Title
+  image:
+    type: image
+    label: Feature Photo
+  image_alt:
+    type: text
+    label: Photo Description (Alt Text)
+  link_1_text:
+    type: text
+    label: First Button Text
+  link_1_url:
+    type: url
+    label: First Button Link
+  link_2_text:
+    type: text
+    label: Second Button Text
+  link_2_url:
+    type: url
+    label: Second Button Link
   chairman_name:
     type: text
     label: State Chairman Name

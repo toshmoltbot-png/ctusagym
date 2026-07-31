@@ -132,14 +132,18 @@ permalink: /
 {# Champions Feature #}
 <section class="mx-auto max-w-6xl px-4 pb-8 sm:px-6">
   <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm sm:flex">
-    <img src="/images/photos/2025-all-around-champions.jpg" alt="2025 USA Gymnastics All Around Champions" class="aspect-[3/2] w-full object-cover sm:w-1/2" loading="lazy">
+    <img src="{{ homepage_feature.image }}" alt="{{ homepage_feature.image_alt }}" class="aspect-[3/2] w-full object-cover sm:w-1/2" loading="lazy">
     <div class="flex flex-col justify-center p-6 sm:p-8">
-      <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[color:var(--usag-red)]">Congratulations</p>
-      <h2 class="mt-2 text-2xl font-black tracking-tight text-slate-950">2025 All Around Champions</h2>
-      <p class="mt-3 text-sm leading-6 text-slate-600">Congratulations to all Connecticut athletes who competed at the 2025 State Championships.</p>
+      <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-[color:var(--usag-red)]">{{ homepage_feature.label }}</p>
+      <h2 class="mt-2 text-2xl font-black tracking-tight text-slate-950">{{ homepage_feature.title }}</h2>
+      <p class="mt-3 text-sm leading-6 text-slate-600">{{ homepage_feature.description }}</p>
       <div class="mt-5 flex flex-wrap gap-4">
-        <a href="/results/" class="inline-flex items-center gap-2 text-sm font-bold text-[color:var(--usag-red)] hover:underline">View Results &rarr;</a>
-        <a href="/hall-of-fame/" class="inline-flex items-center gap-2 text-sm font-bold text-slate-700 hover:underline">Hall of Fame &rarr;</a>
+        {% if homepage_feature.link_1_url %}
+        <a href="{{ homepage_feature.link_1_url }}" class="inline-flex items-center gap-2 text-sm font-bold text-[color:var(--usag-red)] hover:underline">{{ homepage_feature.link_1_text }} &rarr;</a>
+        {% endif %}
+        {% if homepage_feature.link_2_url %}
+        <a href="{{ homepage_feature.link_2_url }}" class="inline-flex items-center gap-2 text-sm font-bold text-slate-700 hover:underline">{{ homepage_feature.link_2_text }} &rarr;</a>
+        {% endif %}
       </div>
     </div>
   </div>
