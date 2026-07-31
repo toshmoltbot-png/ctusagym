@@ -212,10 +212,14 @@ collections_config:
     output: false
     glob:
       - _data/resources_editable.json
+    singular_name: Editable Links
+    singular_key: resources_editable
     preview:
       text:
         - value: Editable forms, documents, and links
       icon: description
+    disable_add: true
+    disable_add_folder: true
 
   # === SITE-WIDE ===
   site_settings:
