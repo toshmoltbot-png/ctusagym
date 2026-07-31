@@ -206,17 +206,14 @@ collections_config:
 
   # === FORMS & DOCUMENTS ===
   resources_editable:
-    path: _data
+    path: _data/resources_editable
     name: Forms & Documents - Editable Links
     icon: description
     output: false
-    glob:
-      - _data/resources_editable.json
-    singular_name: Editable Links
-    singular_key: resources_editable
+    text_key: editor_label
     preview:
       text:
-        - value: Editable forms, documents, and links
+        - key: editor_label
       icon: description
     disable_add: true
     disable_add_folder: true
