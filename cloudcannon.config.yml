@@ -17,12 +17,10 @@ collections_config:
       base: all
 
   calendar:
-    path: _data
+    path: _data/calendar
     name: Season Calendar
     icon: calendar_month
     output: false
-    glob:
-      - _data/calendar.json
 
   announcements:
     path: _data
