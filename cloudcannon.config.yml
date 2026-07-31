@@ -204,6 +204,19 @@ collections_config:
         - key: location
       icon: school
 
+  # === FORMS & DOCUMENTS ===
+  resources_editable:
+    path: _data
+    name: Forms & Documents - Editable Links
+    icon: description
+    output: false
+    glob:
+      - _data/resources_editable.json
+    preview:
+      text:
+        - value: Editable forms, documents, and links
+      icon: description
+
   # === SITE-WIDE ===
   site_settings:
     path: _data
@@ -335,6 +348,30 @@ _inputs:
   link_2_url:
     type: url
     label: Second Button Link
+  host_meet_form_url:
+    type: url
+    label: Host a Meet Request Form (URL)
+    comment: Paste the Google Form link here
+  state_bid_form:
+    type: document
+    label: State Championship Bid Form (PDF)
+    comment: Upload the current year's bid form
+  competition_policies_url:
+    type: url
+    label: Competition Policies Link
+    comment: Usually /policies/ — only change if the page moves
+  meet_director_guidelines:
+    type: document
+    label: Meet Director Guidelines (PDF)
+    comment: Upload the current guidelines document
+  meet_director_checklist:
+    type: document
+    label: Meet Director Checklist (PDF)
+    comment: Upload the current checklist document
+  xcel_clarification:
+    type: document
+    label: Xcel Clarification (PDF)
+    comment: Upload the current Xcel clarification document
   chairman_name:
     type: text
     label: State Chairman Name
