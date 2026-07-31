@@ -21,6 +21,10 @@ collections_config:
     preview:
       image:
         - key: src
+      gallery:
+        image:
+          - key: src
+        fit: cover
 
   announcements:
     path: _data/announcements
