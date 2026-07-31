@@ -24,7 +24,7 @@ collections_config:
 
   announcements:
     path: _data/announcements
-    name: Announcements
+    name: Homepage & News Announcements
     icon: campaign
     output: false
 
