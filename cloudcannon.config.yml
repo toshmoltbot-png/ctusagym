@@ -220,6 +220,7 @@ collections_config:
     output: true
     filter:
       base: all
+    hidden: true
 
   navigation:
     path: _data
@@ -228,6 +229,7 @@ collections_config:
     output: false
     glob:
       - _data/navigation.json
+    hidden: true
 
 _inputs:
   editor_label:
