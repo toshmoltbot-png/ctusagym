@@ -41,12 +41,10 @@ collections_config:
     output: false
 
   state_meets:
-    path: _data
+    path: _data/state_meets
     name: State Meets
     icon: emoji_events
     output: false
-    glob:
-      - _data/state_meets.json
 
   judges_committee:
     path: _data/judges_committee

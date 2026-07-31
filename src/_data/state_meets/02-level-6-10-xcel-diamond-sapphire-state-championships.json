@@ -1,0 +1,125 @@
+{
+  "id": "level-6-10-diamond-sapphire",
+  "title": "Level 6\u201310 & Xcel Diamond/Sapphire State Championships",
+  "dates": "March 20\u201322, 2026",
+  "host": "CT State Committee",
+  "location": "Chelsea Piers (Field House), 1 Blachely Rd, Stamford, CT 06902",
+  "note": "More information will be sent later, but the days/times and age groups are listed below.",
+  "deadlines": {
+    "entriesDue": "Saturday, February 28",
+    "postmarkedBy": "Wednesday, February 25"
+  },
+  "fees": [
+    {
+      "levels": "Level 6\u201310, Xcel Diamond & Xcel Sapphire",
+      "amount": "$125"
+    },
+    {
+      "levels": "Team fees (3 scores)",
+      "amount": "$40"
+    }
+  ],
+  "feesNote": "All teams with enough athletes entered are expected to enter the team competition.",
+  "payment": {
+    "payableTo": "USAG-CT",
+    "address": "Kimberly Vaillancourt (CT-SACC), 71 Homesdale Avenue, Southington, CT 06051"
+  },
+  "schedule": [
+    {
+      "day": "Friday, March 20, 2026",
+      "sessions": [
+        {
+          "name": "XCEL Diamond (Session 1)",
+          "groups": "(2/11/2003\u20136/20/2008), (3/20/2009\u20137/28/2009), (7/29/2009\u20132/15/2010), (3/25/2011\u20133/22/2015)",
+          "times": [
+            "3:00pm Open Stretch",
+            "3:20pm Line up",
+            "3:30pm Begin"
+          ]
+        },
+        {
+          "name": "XCEL Diamond (Session 2) & XCEL Sapphire (All Gymnasts)",
+          "groups": "(6/21/2008\u20139/12/2008), (9/13/2008\u20133/19/2009), (2/16/2010\u20138/18/2010), (8/18/2010\u20133/24/2011)",
+          "times": [
+            "6:30pm Open Stretch",
+            "6:50pm Line up",
+            "7:00pm Begin"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Saturday, March 21, 2026",
+      "sessions": [
+        {
+          "name": "Level 8 (Session 3)",
+          "groups": "All Gymnasts",
+          "times": [
+            "9:00am Open Stretch",
+            "9:20am Line up",
+            "9:30am Begin"
+          ]
+        },
+        {
+          "name": "Level 9 (Session 4)",
+          "groups": "All Gymnasts",
+          "times": [
+            "1:00pm Open Stretch",
+            "1:20pm Line up",
+            "1:30pm Begin"
+          ]
+        },
+        {
+          "name": "Level 10 (Session 5)",
+          "groups": "All Gymnasts",
+          "times": [
+            "5:00pm Open Stretch",
+            "5:20pm Line up",
+            "5:25pm Begin"
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Sunday, March 22, 2026",
+      "sessions": [
+        {
+          "name": "Level 7 (Session 6)",
+          "groups": "All Gymnasts",
+          "times": [
+            "8:00am Open Stretch",
+            "8:20am Line up",
+            "8:30am Begin"
+          ]
+        },
+        {
+          "name": "Level 6 (Session 7)",
+          "groups": "Jr. E (4/3/2012\u20138/13/2012), Jr. C (11/24/2012\u20136/1/2013), CH. E (3/23/2014\u20136/19/2014), CH. C (11/15/2014\u20133/23/2015)",
+          "times": [
+            "11:30am Open Stretch",
+            "11:50am Line up",
+            "12:00pm Begin"
+          ]
+        },
+        {
+          "name": "Level 6 (Session 8)",
+          "groups": "SR. (2/11/2004\u201310/4/2011), CH. D (6/20/2014\u201311/14/2014), CH. B (3/24/2015\u20139/16/2015), CH. A (9/17/2015\u20133/22/2018)",
+          "times": [
+            "3:00pm Open Stretch",
+            "3:20pm Line up",
+            "3:30pm Begin"
+          ]
+        },
+        {
+          "name": "Level 6 (Session 9)",
+          "groups": "Jr. F (10/5/2011\u20134/2/2012), Jr. D (8/14/2012\u201311/23/2012), Jr. B (6/2/2013\u201310/28/2013), Jr. A (10/29/2013\u20133/22/2014)",
+          "times": [
+            "6:30pm Open Stretch",
+            "6:50pm Line up",
+            "7:00pm Begin"
+          ]
+        }
+      ]
+    }
+  ]
+}

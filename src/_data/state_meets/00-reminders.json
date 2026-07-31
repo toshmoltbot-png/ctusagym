@@ -1,0 +1,17 @@
+{
+  "title": "IMPORTANT REMINDER FOR STATES",
+  "lateQualifierDeadline": "noon on Monday following their qualification meet",
+  "recommendation": "It is recommended that coaches include all athletes they intend to qualify on their original state meet entry, with a notation that they intend to qualify. It is not required that they pay in advance of their qualification.",
+  "lateFees": [
+    {
+      "condition": "After the 3 week entry deadline",
+      "fee": "$10 per athlete"
+    },
+    {
+      "condition": "Within 10 days of state meet",
+      "fee": "$50 per athlete"
+    }
+  ],
+  "note": "Late fees are payable to USAG-CT, and are not up to the discretion of the meet director.",
+  "level10Note": "Level 10's may qualify one week before their State Championship; however, the Meet Director must know that the possibility of that gymnast qualifying exists."
+}
