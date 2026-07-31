@@ -23,28 +23,22 @@ collections_config:
     output: false
 
   announcements:
-    path: _data
+    path: _data/announcements
     name: Announcements
     icon: campaign
     output: false
-    glob:
-      - _data/announcements.json
 
   clubs:
-    path: _data
+    path: _data/clubs
     name: Clubs Directory
     icon: location_on
     output: false
-    glob:
-      - _data/clubs.json
 
   photos:
-    path: _data
+    path: _data/photos
     name: Homepage Photos
     icon: photo_library
     output: false
-    glob:
-      - _data/photos.json
 
   state_meets:
     path: _data
@@ -55,28 +49,22 @@ collections_config:
       - _data/state_meets.json
 
   judges_committee:
-    path: _data
+    path: _data/judges_committee
     name: Judges Committee
     icon: gavel
     output: false
-    glob:
-      - _data/judges_committee.json
 
   fees:
-    path: _data
+    path: _data/fees
     name: Entry Fees
     icon: payments
     output: false
-    glob:
-      - _data/fees.json
 
   qualification_scores:
-    path: _data
+    path: _data/qualification_scores
     name: Qualification Scores
     icon: score
     output: false
-    glob:
-      - _data/qualification_scores.json
 
   site_settings:
     path: _data
@@ -87,20 +75,16 @@ collections_config:
       - _data/site.json
 
   hall_of_fame:
-    path: _data
+    path: _data/hall_of_fame
     name: Hall of Fame
     icon: military_tech
     output: false
-    glob:
-      - _data/hall_of_fame.json
 
   clinics:
-    path: _data
+    path: _data/clinics
     name: Camps & Clinics
     icon: school
     output: false
-    glob:
-      - _data/clinics.json
 
   navigation:
     path: _data
