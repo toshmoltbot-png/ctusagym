@@ -15,6 +15,9 @@ collections_config:
     icon: photo_library
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   announcements:
     path: _data/announcements
@@ -33,6 +36,9 @@ collections_config:
     icon: calendar_month
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   state_meets:
     path: _data/state_meets
@@ -40,6 +46,9 @@ collections_config:
     icon: emoji_events
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   fees:
     path: _data/fees
@@ -47,6 +56,9 @@ collections_config:
     icon: payments
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   qualification_scores:
     path: _data/qualification_scores
@@ -54,6 +66,9 @@ collections_config:
     icon: score
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   # === CLUBS & PEOPLE ===
   clubs:
@@ -62,6 +77,9 @@ collections_config:
     icon: location_on
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   judges_committee:
     path: _data/judges_committee
@@ -69,6 +87,9 @@ collections_config:
     icon: gavel
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   hall_of_fame:
     path: _data/hall_of_fame
@@ -76,6 +97,9 @@ collections_config:
     icon: military_tech
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   wall_of_remembrance:
     path: _data/wall_of_remembrance
@@ -83,6 +107,9 @@ collections_config:
     icon: volunteer_activism
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   clinics:
     path: _data/clinics
@@ -90,6 +117,9 @@ collections_config:
     icon: school
     output: false
     text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
 
   # === SITE-WIDE ===
   site_settings:
