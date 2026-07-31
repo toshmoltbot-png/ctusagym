@@ -8,18 +8,11 @@ paths:
   output: _site
 
 collections_config:
-  pages:
-    path: pages
-    name: Pages
-    icon: description
-    output: true
-    filter:
-      base: all
-
-  calendar:
-    path: _data/calendar
-    name: Season Calendar
-    icon: calendar_month
+  # === HOMEPAGE (top to bottom) ===
+  photos:
+    path: _data/photos
+    name: Homepage Photos
+    icon: photo_library
     output: false
     text_key: editor_label
 
@@ -33,17 +26,11 @@ collections_config:
       key: date
       order: descending
 
-  clubs:
-    path: _data/clubs
-    name: Clubs Directory
-    icon: location_on
-    output: false
-    text_key: editor_label
-
-  photos:
-    path: _data/photos
-    name: Homepage Photos
-    icon: photo_library
+  # === SEASON (Calendar > Events > State Meets) ===
+  calendar:
+    path: _data/calendar
+    name: Season Calendar
+    icon: calendar_month
     output: false
     text_key: editor_label
 
@@ -51,13 +38,6 @@ collections_config:
     path: _data/state_meets
     name: State Meets
     icon: emoji_events
-    output: false
-    text_key: editor_label
-
-  judges_committee:
-    path: _data/judges_committee
-    name: Judges Committee
-    icon: gavel
     output: false
     text_key: editor_label
 
@@ -75,18 +55,32 @@ collections_config:
     output: false
     text_key: editor_label
 
-  site_settings:
-    path: _data
-    name: Site Settings
-    icon: settings
+  # === CLUBS & PEOPLE ===
+  clubs:
+    path: _data/clubs
+    name: Clubs Directory
+    icon: location_on
     output: false
-    glob:
-      - _data/site.json
+    text_key: editor_label
+
+  judges_committee:
+    path: _data/judges_committee
+    name: Judges Committee
+    icon: gavel
+    output: false
+    text_key: editor_label
 
   hall_of_fame:
     path: _data/hall_of_fame
     name: Hall of Fame
     icon: military_tech
+    output: false
+    text_key: editor_label
+
+  wall_of_remembrance:
+    path: _data/wall_of_remembrance
+    name: Wall of Remembrance
+    icon: volunteer_activism
     output: false
     text_key: editor_label
 
@@ -96,6 +90,23 @@ collections_config:
     icon: school
     output: false
     text_key: editor_label
+
+  # === SITE-WIDE ===
+  site_settings:
+    path: _data
+    name: Site Settings
+    icon: settings
+    output: false
+    glob:
+      - _data/site.json
+
+  pages:
+    path: pages
+    name: Pages
+    icon: description
+    output: true
+    filter:
+      base: all
 
   navigation:
     path: _data
