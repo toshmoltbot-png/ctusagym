@@ -35,6 +35,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: title
+      subtext:
+        - key: date
+      icon: campaign
 
   # === SEASON (Calendar > Events > State Meets) ===
   calendar:
@@ -46,6 +52,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: host
+      icon: calendar_month
 
   state_meets:
     path: _data/state_meets
@@ -56,6 +68,10 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: title
+      icon: emoji_events
 
   fees:
     path: _data/fees
@@ -66,6 +82,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: level
+      subtext:
+        - key: state
+      icon: payments
 
   qualification_scores:
     path: _data/qualification_scores
@@ -76,6 +98,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: program
+      subtext:
+        - key: score
+      icon: score
 
   # === CLUBS & PEOPLE ===
   clubs:
@@ -87,6 +115,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: city
+      icon: location_on
 
   judges_committee:
     path: _data/judges_committee
@@ -97,6 +131,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: role
+      icon: gavel
 
   hall_of_fame:
     path: _data/hall_of_fame
@@ -107,6 +147,10 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: title
+      icon: military_tech
 
   wall_of_remembrance:
     path: _data/wall_of_remembrance
@@ -117,6 +161,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: years
+      icon: volunteer_activism
 
   clinics:
     path: _data/clinics
@@ -127,6 +177,12 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: location
+      icon: school
 
   # === SITE-WIDE ===
   site_settings:
