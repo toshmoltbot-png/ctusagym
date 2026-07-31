@@ -4,7 +4,6 @@ const path = require('path');
 module.exports = function() {
   const dir = path.join(__dirname, 'wall_of_remembrance');
   if (!fs.existsSync(dir)) return [];
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort();
-  // Reverse so newest additions (added via CMS after numbered files) appear first
-  return files.reverse().map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8')));
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort().reverse();
+  return files.map(f => { const d = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8')); delete d.editor_label; return d; });
 };

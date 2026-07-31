@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// Parse "Mon YYYY" or "Mon DD, YYYY" or ISO dates to comparable timestamps
 function parseAnnouncementDate(dateStr) {
   if (!dateStr) return 0;
   const d = new Date(dateStr);
@@ -15,16 +14,15 @@ module.exports = function() {
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort();
   const items = files.map((f, i) => {
     const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
-    data._sortIndex = i; // preserve file order as tiebreaker
+    data._sortIndex = i;
+    delete data.editor_label;
     return data;
   });
-  // Sort by date newest first; when dates match, preserve original file order
   items.sort((a, b) => {
     const dateDiff = parseAnnouncementDate(b.date) - parseAnnouncementDate(a.date);
     if (dateDiff !== 0) return dateDiff;
     return a._sortIndex - b._sortIndex;
   });
-  // Clean up internal field
   items.forEach(item => delete item._sortIndex);
   return items;
 };

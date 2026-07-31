@@ -21,12 +21,14 @@ collections_config:
     name: Season Calendar
     icon: calendar_month
     output: false
+    text_key: editor_label
 
   announcements:
     path: _data/announcements
     name: Homepage & News Announcements
     icon: campaign
     output: false
+    text_key: editor_label
     sort:
       key: date
       order: descending
@@ -36,36 +38,42 @@ collections_config:
     name: Clubs Directory
     icon: location_on
     output: false
+    text_key: editor_label
 
   photos:
     path: _data/photos
     name: Homepage Photos
     icon: photo_library
     output: false
+    text_key: editor_label
 
   state_meets:
     path: _data/state_meets
     name: State Meets
     icon: emoji_events
     output: false
+    text_key: editor_label
 
   judges_committee:
     path: _data/judges_committee
     name: Judges Committee
     icon: gavel
     output: false
+    text_key: editor_label
 
   fees:
     path: _data/fees
     name: Entry Fees
     icon: payments
     output: false
+    text_key: editor_label
 
   qualification_scores:
     path: _data/qualification_scores
     name: Qualification Scores
     icon: score
     output: false
+    text_key: editor_label
 
   site_settings:
     path: _data
@@ -80,12 +88,14 @@ collections_config:
     name: Hall of Fame
     icon: military_tech
     output: false
+    text_key: editor_label
 
   clinics:
     path: _data/clinics
     name: Camps & Clinics
     icon: school
     output: false
+    text_key: editor_label
 
   navigation:
     path: _data
@@ -96,6 +106,8 @@ collections_config:
       - _data/navigation.json
 
 _inputs:
+  editor_label:
+    hidden: true
   name:
     type: text
     label: Event Name

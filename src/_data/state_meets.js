@@ -11,6 +11,7 @@ module.exports = function() {
   
   for (const f of files) {
     const data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+    delete data.editor_label;
     if (f.includes('reminders')) {
       reminders = data;
     } else {
