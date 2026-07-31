@@ -42,6 +42,26 @@ collections_config:
         - key: date
       icon: campaign
 
+  # === HOMEPAGE FEATURE ===
+  homepage_feature:
+    path: _data
+    name: Homepage Bottom - Featured Section
+    icon: star
+    output: false
+    glob:
+      - _data/homepage_feature.json
+    preview:
+      text:
+        - key: title
+      subtext:
+        - key: label
+      image:
+        - key: image
+      gallery:
+        image:
+          - key: image
+        fit: cover
+
   # === SEASON (Calendar > Events > State Meets) ===
   calendar:
     path: _data/calendar
@@ -183,26 +203,6 @@ collections_config:
       subtext:
         - key: location
       icon: school
-
-  # === HOMEPAGE FEATURE ===
-  homepage_feature:
-    path: _data
-    name: Homepage Bottom - Featured Section
-    icon: star
-    output: false
-    glob:
-      - _data/homepage_feature.json
-    preview:
-      text:
-        - key: title
-      subtext:
-        - key: label
-      image:
-        - key: image
-      gallery:
-        image:
-          - key: image
-        fit: cover
 
   # === SITE-WIDE ===
   site_settings:
