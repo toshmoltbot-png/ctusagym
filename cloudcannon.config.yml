@@ -18,6 +18,9 @@ collections_config:
     sort:
       key: editor_label
       order: ascending
+    preview:
+      image:
+        - key: src
 
   announcements:
     path: _data/announcements
