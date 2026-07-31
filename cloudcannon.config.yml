@@ -204,24 +204,10 @@ collections_config:
         - key: location
       icon: school
 
-  # === FORMS & DOCUMENTS ===
-  resources_editable:
-    path: _data/resources_editable
-    name: Forms & Documents - Editable Links
-    icon: description
-    output: false
-    text_key: editor_label
-    preview:
-      text:
-        - key: editor_label
-      icon: description
-    disable_add: true
-    disable_add_folder: true
-
   # === SITE-WIDE ===
   site_settings:
     path: _data
-    name: Site-Wide Settings
+    name: Site-Wide Settings & Editable Documents
     icon: settings
     output: false
     glob:
