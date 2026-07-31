@@ -65,7 +65,7 @@ collections_config:
   # === SEASON (Calendar > Events > State Meets) ===
   calendar:
     path: _data/calendar
-    name: Calendar Page - Season Meets
+    name: Season Calendar - Meets
     icon: calendar_month
     output: false
     text_key: editor_label
@@ -81,7 +81,7 @@ collections_config:
 
   state_meets:
     path: _data/state_meets
-    name: State Meets Page - Meet Details
+    name: State Meets - Meet Details
     icon: emoji_events
     output: false
     text_key: editor_label
@@ -95,7 +95,7 @@ collections_config:
 
   fees:
     path: _data/fees
-    name: State Meets Page - Entry Fees
+    name: State Meets - Entry Fees
     icon: payments
     output: false
     text_key: editor_label
@@ -111,7 +111,7 @@ collections_config:
 
   qualification_scores:
     path: _data/qualification_scores
-    name: State Meets Page - Qualification Scores
+    name: State Meets - Qualification Scores
     icon: score
     output: false
     text_key: editor_label
@@ -128,7 +128,7 @@ collections_config:
   # === CLUBS & PEOPLE ===
   clubs:
     path: _data/clubs
-    name: Clubs Page - Club Directory
+    name: Clubs - Club Directory
     icon: location_on
     output: false
     text_key: editor_label
@@ -144,7 +144,7 @@ collections_config:
 
   judges_committee:
     path: _data/judges_committee
-    name: Judges Page - Committee Roster
+    name: Judges - Committee Roster
     icon: gavel
     output: false
     text_key: editor_label
@@ -160,7 +160,7 @@ collections_config:
 
   hall_of_fame:
     path: _data/hall_of_fame
-    name: Hall of Fame Page - Inductee Classes
+    name: Hall of Fame - Inductee Classes
     icon: military_tech
     output: false
     text_key: editor_label
@@ -174,7 +174,7 @@ collections_config:
 
   wall_of_remembrance:
     path: _data/wall_of_remembrance
-    name: Hall of Fame Page - Memorial Wall
+    name: Hall of Fame - Memorial Wall
     icon: volunteer_activism
     output: false
     text_key: editor_label
@@ -190,7 +190,7 @@ collections_config:
 
   clinics:
     path: _data/clinics
-    name: Events Page - Camps & Clinics
+    name: Events Hub - Camps & Clinics
     icon: school
     output: false
     text_key: editor_label
