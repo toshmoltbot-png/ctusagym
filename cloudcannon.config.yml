@@ -23,8 +23,8 @@ collections_config:
     output: false
     text_key: editor_label
     sort:
-      key: date
-      order: descending
+      key: editor_label
+      order: ascending
 
   # === SEASON (Calendar > Events > State Meets) ===
   calendar:
