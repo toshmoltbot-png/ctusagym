@@ -1,12 +1,12 @@
 {
   "name": "Gymnastics Training Center",
-  "address": "",
-  "city": "",
+  "address": "520 Hopmeadow St.",
+  "city": "Simsbury",
   "state": "CT",
-  "zip": "",
-  "phone": "",
-  "website": "",
-  "email": "",
+  "zip": "06070",
+  "phone": "860-658-7340",
+  "website": "www.gymnasticstrainingcenter.com",
+  "email": "gtccoaches@gmail.com",
   "contact": "",
   "note": "",
   "editor_label": "Club Listing 24 of 42"
