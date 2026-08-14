@@ -43,3 +43,18 @@ mark[data-pagefind-highlight] {
 .policy-prose a{font-weight:600;color:var(--color-slate-900);text-decoration-line:underline;text-decoration-color:var(--color-slate-300);text-underline-offset:4px}
 .policy-prose a:hover{text-decoration-color:var(--color-slate-900)}
 .policy-callout h3{margin-top:0;font-size:.875rem;font-weight:900;text-transform:none;letter-spacing:normal;color:var(--color-slate-900)}
+
+/* ── Clickable club cards ──────────────────────────────────────────────
+   The club name is a real <a>; its ::after is stretched over the whole
+   card so clicking anywhere opens the club site in a new tab. Phone and
+   email stay individually clickable via .club-card-inline (raised above
+   the overlay). Cards with no website get no overlay at all. */
+.club-card--linked{transition:box-shadow .15s ease-in-out,border-color .15s ease-in-out}
+.club-card--linked:hover{border-color:var(--color-slate-300);box-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a}
+.club-card-link{color:inherit;text-decoration:none}
+.club-card-link::after{content:"";position:absolute;inset:0;border-radius:var(--radius-xl);z-index:1}
+.club-card--linked:hover .club-card-link{color:var(--usag-red)}
+.club-card-link:focus-visible{outline:none}
+.club-card--linked:has(.club-card-link:focus-visible){outline:2px solid var(--usag-red);outline-offset:2px}
+.club-card-inline{position:relative;z-index:2}
+@media (hover:hover){.club-card--linked{cursor:pointer}}
