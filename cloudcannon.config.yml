@@ -65,7 +65,7 @@ collections_config:
   # === SEASON (Calendar > Events > State Meets) ===
   calendar:
     path: _data/calendar
-    name: Season Calendar - Meets
+    name: Calendar - Entries
     icon: calendar_month
     output: false
     text_key: editor_label
@@ -368,14 +368,6 @@ _inputs:
   copyright_year:
     type: text
     label: Copyright Year
-  season_label:
-    type: text
-    label: Current Season (Calendar badge)
-    comment: 'Shown as the badge on the Calendar page, e.g. 2026-2027'
-  season_note:
-    type: text
-    label: Calendar Note (optional)
-    comment: Small grey note next to the season badge. Leave blank to hide it.
   fees_season_label:
     type: text
     label: Entry Fees Season
