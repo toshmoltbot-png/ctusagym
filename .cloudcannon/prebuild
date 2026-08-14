@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# CloudCannon prebuild hook.
+# Recompiles Tailwind CSS from src/assets/css/tailwind.css before Eleventy runs.
+# Without this, editing a template that introduces a new utility class would
+# produce unstyled output, because the CDN fallback was removed.
+set -euo pipefail
+npm run build:css

@@ -8,8 +8,8 @@ description: Season calendar for Connecticut Women's USA Gymnastics meets and ev
 <section class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
   <h1 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">Season Calendar</h1>
   <div class="mt-2 inline-flex items-center gap-2">
-    <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">2025-2026 Season</span>
-    <span class="text-xs text-slate-500">The 2026-2027 schedule will be posted when available.</span>
+    <span class="rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-800">{{ site.season_label }} Season</span>
+    {% if site.season_note %}<span class="text-xs text-slate-500">{{ site.season_note }}</span>{% endif %}
   </div>
   <p class="mt-2 text-sm text-slate-600">A clear, mobile-first listing of meets with quick access to details and forms.</p>
 

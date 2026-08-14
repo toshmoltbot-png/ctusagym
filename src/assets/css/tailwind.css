@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* Scan Eleventy templates for class usage */
+@source "../../**/*.njk";
+@source "../../**/*.md";
+@source "../../**/*.html";
+
+:root {
+  --usag-navy: #0a1d3a;
+  /* Preserves the live rendered red. The previous inline <style> in base.njk
+     overrode site.css with this value, so this is the true shipped brand red. */
+  --usag-red: #c5281c;
+}
+
+:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--usag-red) 70%, white);
+  outline-offset: 2px;
+}
+
+mark[data-pagefind-highlight] {
+  background-color: #d6000026;
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
