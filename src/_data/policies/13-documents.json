@@ -1,0 +1,51 @@
+{
+  "title": "Documents &amp; Resources",
+  "anchor": "documents",
+  "jump_label": "Documents",
+  "content": "",
+  "callout": "",
+  "content_after": "",
+  "block": "documents_grid",
+  "cards_title": "",
+  "cards_intro": "",
+  "cards": [],
+  "cards_footnote": "",
+  "links": [
+    {
+      "link_text": "CT Meet Director Guidelines (PDF)",
+      "link_url": "/docs/ct-meet-director-guidelines.pdf",
+      "external": false
+    },
+    {
+      "link_text": "Meet Director Checklist (PDF)",
+      "link_url": "/docs/ct-meet-director-checklist.pdf",
+      "external": false
+    },
+    {
+      "link_text": "Rules & Policies 2025-26 (USAG)",
+      "link_url": "https://static.usagym.org/PDFs/Women/Rules/rp/rulespolicies.pdf",
+      "external": true
+    },
+    {
+      "link_text": "Membership Requirement Guide (USAG)",
+      "link_url": "https://static.usagym.org/PDFs/Member%20Services/requirements_table.pdf",
+      "external": true
+    },
+    {
+      "link_text": "Meet Organization Guidelines (USAG)",
+      "link_url": "https://www.usagym.org/PDFs/Women/Rules/Rules%20and%20Policies/w-meetorgguide.pdf",
+      "external": true
+    },
+    {
+      "link_text": "Judges Competition Checklist (Google Form)",
+      "link_url": "https://docs.google.com/forms/d/e/1FAIpQLSfBZQ4-vGJ9GSc1LZxdPcBr5YycLtKV9MnLcZGwrOz_c8YI-g/viewform",
+      "external": true
+    },
+    {
+      "link_text": "2026 State Championship Bid Form (PDF)",
+      "link_url": "/docs/2026-state-bid-form.pdf",
+      "external": false
+    }
+  ],
+  "editor_label": "13. Documents & Resources"
+}

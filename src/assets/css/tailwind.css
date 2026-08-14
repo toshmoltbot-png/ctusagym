@@ -23,3 +23,23 @@ mark[data-pagefind-highlight] {
   border-radius: 2px;
   padding: 0 1px;
 }
+
+/* ── Editable policy prose ─────────────────────────────────────────────
+   Styles the rich-text HTML that comes from src/_data/policies/*.json.
+   Hand-written (not Tailwind-generated) so CloudCannon editors can change
+   the words without needing new utility classes compiled into site.css. */
+.policy-prose{font-size:.875rem;line-height:1.5rem;color:var(--color-slate-700)}
+.policy-prose>*+*{margin-top:.75rem}
+.policy-prose p{font-size:.875rem;line-height:1.5rem;color:var(--color-slate-700)}
+.policy-prose strong{font-weight:700;color:var(--color-slate-900)}
+.policy-prose em{font-style:italic;color:var(--color-slate-600)}
+.policy-prose h3{margin-top:1.25rem;font-size:.875rem;font-weight:900;line-height:1.25rem;letter-spacing:.025em;text-transform:uppercase;color:var(--usag-red)}
+.policy-prose>h3:first-child{margin-top:0}
+.policy-prose ul,.policy-prose ol{margin-top:.5rem;padding-left:1.25rem;color:var(--color-slate-700)}
+.policy-prose ul{list-style-type:disc}
+.policy-prose ol{list-style-type:decimal}
+.policy-prose li{margin-top:.375rem;font-size:.875rem;line-height:1.5rem}
+.policy-prose li::marker{color:var(--color-slate-400)}
+.policy-prose a{font-weight:600;color:var(--color-slate-900);text-decoration-line:underline;text-decoration-color:var(--color-slate-300);text-underline-offset:4px}
+.policy-prose a:hover{text-decoration-color:var(--color-slate-900)}
+.policy-callout h3{margin-top:0;font-size:.875rem;font-weight:900;text-transform:none;letter-spacing:normal;color:var(--color-slate-900)}

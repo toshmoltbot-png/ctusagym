@@ -125,6 +125,115 @@ collections_config:
         - key: score
       icon: score
 
+  # === COMPETITION POLICIES ===
+  policies:
+    path: _data/policies
+    name: Competition Policies - Sections
+    icon: gavel
+    output: false
+    text_key: editor_label
+    sort:
+      key: editor_label
+      order: ascending
+    preview:
+      text:
+        - key: title
+      subtext:
+        - key: jump_label
+      icon: gavel
+    _inputs:
+      title:
+        type: text
+        label: Section Heading
+        comment: Shown as the bold heading at the top of the section box
+      jump_label:
+        type: text
+        label: Quick Jump Button Text
+        comment: Leave blank to hide this section from the row of jump buttons at the top of the page
+      anchor:
+        type: text
+        label: Anchor (advanced)
+        comment: Used by the jump buttons. Only change this if you know what it does.
+      content:
+        type: html
+        label: Main Text
+        options:
+          bold: true
+          italic: true
+          link: true
+          bulletedlist: true
+          numberedlist: true
+          format: p h3
+      callout:
+        type: html
+        label: Highlighted Grey Box (optional)
+        comment: Leave blank if this section does not need a highlighted box
+        options:
+          bold: true
+          italic: true
+          link: true
+          bulletedlist: true
+          numberedlist: true
+          format: p h3
+      content_after:
+        type: html
+        label: Extra Notes Below (optional)
+        comment: Appears under a divider line at the bottom of the section
+        options:
+          bold: true
+          italic: true
+          link: true
+          bulletedlist: true
+          numberedlist: true
+          format: p h3
+      block:
+        type: select
+        label: Automatic Table (advanced)
+        comment: Pulls in a table that is edited elsewhere. Leave as None for normal text sections.
+        options:
+          values:
+            - value: ''
+              label: None
+            - value: fees_table
+              label: Entry Fees table
+            - value: qualification_table
+              label: Qualification Scores table
+            - value: documents_grid
+              label: Documents & links grid
+      cards_title:
+        type: text
+        label: Info Cards - Heading (optional)
+      cards_intro:
+        type: textarea
+        label: Info Cards - Intro Text (optional)
+      cards:
+        type: array
+        label: Info Cards (optional)
+      cards_footnote:
+        type: text
+        label: Info Cards - Small Print (optional)
+      links:
+        type: array
+        label: Documents & Links (optional)
+
+  policies_page:
+    path: _data
+    name: Competition Policies - Page Intro
+    icon: article
+    output: false
+    glob:
+      - _data/policies_page.json
+    _inputs:
+      eyebrow:
+        type: text
+        label: Small Red Text Above Title
+      heading:
+        type: text
+        label: Page Title
+      intro:
+        type: textarea
+        label: Intro Paragraph
+
   # === CLUBS & PEOPLE ===
   clubs:
     path: _data/clubs
@@ -141,6 +250,39 @@ collections_config:
       subtext:
         - key: city
       icon: location_on
+    _inputs:
+      name:
+        type: text
+        label: Gym Name
+      address:
+        type: text
+        label: Street Address
+      city:
+        type: text
+        label: City
+      state:
+        type: text
+        label: State
+      zip:
+        type: text
+        label: ZIP Code
+      phone:
+        type: text
+        label: Phone
+      website:
+        type: text
+        label: Website
+        comment: 'Just the domain, no https:// — for example: aerialsportsconditioning.com'
+      email:
+        type: email
+        label: Email
+      contact:
+        type: text
+        label: Contact Person
+      note:
+        type: text
+        label: Note (optional)
+        comment: Shown in small grey text next to the gym name
 
   judges_committee:
     path: _data/judges_committee
@@ -385,4 +527,37 @@ _editables:
     numberedlist: true
     heading: true
 
-_structures: {}
+_structures:
+  cards:
+    values:
+      - label: Info Card
+        icon: badge
+        value:
+          card_label: ''
+          card_text: ''
+        _inputs:
+          card_label:
+            type: text
+            label: Card Heading
+          card_text:
+            type: text
+            label: Card Text
+  links:
+    values:
+      - label: Document or Link
+        icon: link
+        value:
+          link_text: ''
+          link_url: ''
+          external: false
+        _inputs:
+          link_text:
+            type: text
+            label: Link Text
+          link_url:
+            type: text
+            label: Link URL or File Path
+          external:
+            type: checkbox
+            label: Opens on another website
+            comment: Check this for links to usagym.org, Google Forms, etc.
