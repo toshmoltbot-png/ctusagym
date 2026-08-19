@@ -1,0 +1,126 @@
+{
+  "id": "XG,XP,XD,XSAP Championship",
+  "title": "XCEL Gold, Platinum , Dimond , SAPPHIRE  State Championships",
+  "dates": "April 30– May 2, 2027",
+  "host": "TBA",
+  "location": "TBA",
+  "note": "More information will be sent later, but the days/times and age groups are listed below.",
+  "deadlines": {
+    "entriesDue": "Saturday, April 3",
+    "postmarkedBy": "Wednesday, March 31"
+  },
+  "fees": [
+    {
+      "levels": "Xcel Gold-Sapphire ",
+      "amount": "$125"
+    },
+    {
+      "levels": "Team fees (3 scores)",
+      "amount": "$40"
+    }
+  ],
+  "feesNote": "All teams with enough athletes entered are expected to enter the team competition.",
+  "payment": {
+    "payableTo": "TBA",
+    "address": "TBA"
+  },
+  "schedule": [
+    {
+      "day": "Friday, April 30, 2027",
+      "sessions": [
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            "8:00AM Stretch",
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Saturday, May 1, 2027",
+      "sessions": [
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Sunday, May 2, 2027",
+      "sessions": [
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            "8:00AM Stretch",
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "name": "TBA",
+          "groups": null,
+          "times": [
+            null,
+            null,
+            null
+          ]
+        }
+      ]
+    }
+  ],
+  "editor_label": "State Meet 2 of 4"
+}

@@ -1,12 +1,12 @@
 {
-  "id": "xcel-gold-platinum",
-  "title": "Xcel Gold & Platinum State Championships",
-  "dates": "April 24\u201326, 2026",
-  "host": "Dunne's Gymnastics",
-  "location": "Wheeler Recreation Center, University of Bridgeport, Bridgeport, CT",
+  "id": "XG-XSAP Championship",
+  "title": "Xcel Gold ,Platinum, Diamond, Sapphire State Championships",
+  "dates": "April 30 - May 2, 2027",
+  "host": "TBA",
+  "location": "TBA",
   "deadlines": {
-    "entriesDue": "Saturday, April 4",
-    "postmarkedBy": "Wednesday, April 1"
+    "entriesDue": "Saturday, April 3",
+    "postmarkedBy": "Wednesday, March 31"
   },
   "fees": [
     {
@@ -20,8 +20,8 @@
   ],
   "feesNote": "All teams with enough athletes entered are expected to enter the team competition.",
   "payment": {
-    "payableTo": "Dunne's Gymnastics",
-    "address": "38 Pendleton Drive, Hebron, CT 06248"
+    "payableTo": "TBA",
+    "address": "TBA"
   },
   "schedule": [],
   "editor_label": "State Meet 3 of 4"
