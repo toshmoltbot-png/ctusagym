@@ -34,6 +34,17 @@ description: Connecticut Women's USA Gymnastics news, updates, announcements, aw
         {% if item.link %}
         <a href="{{ item.link }}" class="mt-2 inline-flex text-sm font-bold text-[color:var(--usag-red)] hover:underline">Learn more &rarr;</a>
         {% endif %}
+        {% if item.links %}
+        <ul class="mt-3 space-y-2">
+          {% for resource in item.links %}
+          <li>
+            <a href="{{ resource.link_url }}" class="inline-flex text-sm font-bold text-[color:var(--usag-red)] hover:underline"{% if resource.external %} target="_blank" rel="noopener"{% endif %}>
+              {{ resource.link_text }} &rarr;
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </div>
       {% endfor %}
     </div>

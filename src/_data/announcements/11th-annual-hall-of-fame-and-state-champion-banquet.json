@@ -2,7 +2,24 @@
   "date": "September 8, 2026",
   "category": "general",
   "title": "11th Annual Hall Of Fame and State Champion Banquet",
-  "description": "Congratulations our 3 Hall of fame inductees and All Around Champions. They will be honored at the Hall of Fame Banquet on Sunday October 18th. (Information to Follow)",
+  "description": "Congratulations to our three Hall of Fame inductees and All-Around State Champions. They will be honored at the Hall of Fame Banquet on Sunday, October 18.",
   "link": null,
+  "links": [
+    {
+      "link_text": "State Champion Invitation & Registration",
+      "link_url": "/uploads/dearstatechampionhof2026.docx",
+      "external": false
+    },
+    {
+      "link_text": "Professional Member Invitation & Registration",
+      "link_url": "/uploads/professional-members-hof2026.docx",
+      "external": false
+    },
+    {
+      "link_text": "Program Ads & Sponsorship Information",
+      "link_url": "/uploads/hof-sponsors-program-ads-2026.docx",
+      "external": false
+    }
+  ],
   "editor_label": "Announcement 1 of 12"
 }

@@ -41,6 +41,15 @@ collections_config:
       subtext:
         - key: date
       icon: campaign
+    _inputs:
+      link:
+        type: text
+        label: Single Link URL (optional)
+        comment: Use this for one page or website link. For uploaded files, use Document Links below.
+      links:
+        type: array
+        label: Document Links (optional)
+        comment: Add one or more labeled file downloads or web links to this announcement.
 
   # === HOMEPAGE FEATURE ===
   homepage_feature:
@@ -447,6 +456,9 @@ _inputs:
   link:
     type: url
     label: Link URL
+  links:
+    type: array
+    label: Document Links
   src:
     type: image
     label: Photo

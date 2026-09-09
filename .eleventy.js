@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/docs");
+  eleventyConfig.addPassthroughCopy("src/uploads");
   eleventyConfig.addPassthroughCopy("src/favicon.png");
 
   // Parse date string - handles both "2025-10-24" and "2025-10-24T00:00:00.000Z"
