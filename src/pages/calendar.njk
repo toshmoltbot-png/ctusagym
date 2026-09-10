@@ -32,6 +32,16 @@ description: Season calendar for Connecticut Women's USA Gymnastics meets and ev
           {% endif %}
         </div>
         <div class="mt-1 text-xs text-slate-600">{{ event.start | dateRange(event.end) }} &bull; {{ event.host }}, {{ event.state }} &bull; {{ event.location }}</div>
+        {% if event.meet_url or event.flyer %}
+        <div class="mt-3 flex flex-wrap gap-2">
+          {% if event.meet_url %}
+          <a href="{{ event.meet_url }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-md bg-slate-900 px-3 py-2 text-xs font-bold text-white transition hover:bg-slate-700">Meet Website or Registration</a>
+          {% endif %}
+          {% if event.flyer %}
+          <a href="{{ event.flyer }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-md border border-slate-300 bg-white px-3 py-2 text-xs font-bold text-slate-800 transition hover:bg-slate-50">View Meet Flyer</a>
+          {% endif %}
+        </div>
+        {% endif %}
       </div>
     </li>
     {% endfor %}

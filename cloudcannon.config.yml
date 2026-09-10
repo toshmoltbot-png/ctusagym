@@ -411,6 +411,14 @@ _inputs:
   location:
     type: text
     label: Full Address
+  meet_url:
+    type: url
+    label: Meet Website or Registration Link (optional)
+    comment: Paste the meet webpage, registration page, or results link here. Leave blank if there is no link.
+  flyer:
+    type: document
+    label: Meet Flyer (optional)
+    comment: Upload a PDF, Word document, or image supplied by the meet host. Leave blank if there is no flyer.
   address:
     type: text
     label: Street Address
