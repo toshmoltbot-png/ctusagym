@@ -19,7 +19,10 @@
       </div>
     </div>
     <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-      <div>&copy; {{ site.copyright_year }} {{ site.title }}</div>
+      <div>
+        &copy; {{ site.copyright_year }} {{ site.title }}
+        <a href="/editor-help/" aria-label="Website editor instructions" title="Editor Help" class="ml-1 text-slate-300 no-underline transition hover:text-[color:var(--usag-red)] focus:text-[color:var(--usag-red)]">&#9733;</a>
+      </div>
       <div>Built for clarity, speed, and mobile-first meet-day utility.</div>
     </div>
   </div>
