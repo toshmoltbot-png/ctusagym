@@ -35,4 +35,4 @@ document input uploads beneath `/uploads/meeting-minutes/` and stores a site-rel
 - `older` records render only inside the existing collapsed `Older Minutes` details element.
 - Valid records render the public label as a link. If `pdf_document` is present, the public label opens the PDF and a separate Word link opens `document`. Otherwise the public label opens `document`.
 - Invalid or incomplete records render no anchor.
-- Link classes and arrow markup remain byte-equivalent to the pre-migration template.
+- Records without an additional PDF preserve the original link classes and arrow markup.
