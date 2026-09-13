@@ -107,14 +107,20 @@ description: Meet the Connecticut Women's USA Gymnastics state committee, office
         <p class="mt-2 text-sm leading-6 text-slate-600">Archive of committee meeting minutes and downloads.</p>
         <ul class="mt-4 space-y-2">
           {% for minute in meeting_minutes.current %}
-            <li><a href="{{ minute.document }}" class="inline-flex items-start gap-2 text-sm font-semibold leading-5 text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900"><span aria-hidden="true">&#x2197;</span> <span>{{ minute.label }}</span></a></li>
+            <li>
+              <a href="{{ minute.pdf_document or minute.document }}" class="inline-flex items-start gap-2 text-sm font-semibold leading-5 text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900"><span aria-hidden="true">&#x2197;</span> <span>{{ minute.label }}{% if minute.pdf_document %} (PDF){% endif %}</span></a>
+              {% if minute.pdf_document %}<a href="{{ minute.document }}" class="ml-2 text-xs font-bold text-[color:var(--usag-red)] underline decoration-[color:var(--usag-red)]/30 underline-offset-4 hover:decoration-[color:var(--usag-red)]">Word</a>{% endif %}
+            </li>
           {% endfor %}
         </ul>
         <details class="mt-3 border-t border-slate-100 pt-3">
           <summary class="cursor-pointer text-xs font-black uppercase tracking-wide text-[color:var(--usag-red)]">Older Minutes</summary>
           <ul class="mt-3 space-y-2">
             {% for minute in meeting_minutes.older %}
-              <li><a href="{{ minute.document }}" class="inline-flex items-start gap-2 text-sm font-semibold leading-5 text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900"><span aria-hidden="true">&#x2197;</span> <span>{{ minute.label }}</span></a></li>
+              <li>
+                <a href="{{ minute.pdf_document or minute.document }}" class="inline-flex items-start gap-2 text-sm font-semibold leading-5 text-slate-800 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900"><span aria-hidden="true">&#x2197;</span> <span>{{ minute.label }}{% if minute.pdf_document %} (PDF){% endif %}</span></a>
+                {% if minute.pdf_document %}<a href="{{ minute.document }}" class="ml-2 text-xs font-bold text-[color:var(--usag-red)] underline decoration-[color:var(--usag-red)]/30 underline-offset-4 hover:decoration-[color:var(--usag-red)]">Word</a>{% endif %}
+              </li>
             {% endfor %}
           </ul>
         </details>

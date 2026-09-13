@@ -397,7 +397,7 @@ collections_config:
       document:
         type: document
         label: Minutes Document
-        comment: Upload the approved PDF or Word document that visitors should download.
+        comment: Upload the approved PDF or Word document that visitors should download. This is the only required file.
         options:
           required: true
           paths:
@@ -407,6 +407,17 @@ collections_config:
             - application/pdf
             - application/msword
             - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+      pdf_document:
+        type: document
+        label: Additional PDF Version
+        comment: Optional. If the main Minutes Document is a Word file, upload a PDF copy here so visitors can choose either format.
+        options:
+          required: false
+          paths:
+            uploads: /uploads/meeting-minutes/
+            uploads_filename: '{filename|slugify}'
+          accepts_mime_types:
+            - application/pdf
       display_group:
         type: select
         label: Display Section

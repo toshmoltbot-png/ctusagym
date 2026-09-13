@@ -4,10 +4,18 @@ const path = require('path');
 const VALID_GROUPS = new Set(['current', 'older']);
 
 function isRenderable(item) {
+  const optionalPdfIsValid = item && (
+    item.pdf_document === undefined ||
+    item.pdf_document === null ||
+    item.pdf_document === '' ||
+    (typeof item.pdf_document === 'string' && item.pdf_document.trim())
+  );
+
   return Boolean(
     item &&
     typeof item.label === 'string' && item.label.trim() &&
     typeof item.document === 'string' && item.document.trim() &&
+    optionalPdfIsValid &&
     VALID_GROUPS.has(item.display_group) &&
     Number.isInteger(item.order) && item.order > 0
   );
