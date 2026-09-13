@@ -356,6 +356,73 @@ collections_config:
       icon: school
 
   # === SITE-WIDE ===
+  meeting_minutes:
+    path: _data/meeting_minutes
+    name: Meeting Minutes
+    icon: description
+    output: false
+    text_key: editor_label
+    sort:
+      key: order
+      order: ascending
+    paths:
+      uploads: /uploads/meeting-minutes/
+      uploads_filename: '{filename|slugify}'
+    preview:
+      text:
+        - key: label
+      subtext:
+        - key: meeting_date
+      icon: description
+    _inputs:
+      editor_label:
+        type: text
+        label: Editor List Label
+        comment: Internal label used in CloudCannon. A good format is “2027 - June Committee Minutes.”
+        hidden: false
+        options:
+          required: true
+      label:
+        type: text
+        label: Public Link Label
+        comment: Exact link text visitors will see, such as “June 2027 Committee Minutes.”
+        options:
+          required: true
+      meeting_date:
+        type: date
+        label: Meeting Date
+        comment: The date the committee meeting took place.
+        options:
+          required: true
+      document:
+        type: document
+        label: Minutes Document
+        comment: Upload the approved PDF or Word document that visitors should download.
+        options:
+          required: true
+          paths:
+            uploads: /uploads/meeting-minutes/
+            uploads_filename: '{filename|slugify}'
+          accepts_mime_types:
+            - application/pdf
+            - application/msword
+            - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+      display_group:
+        type: select
+        label: Display Section
+        comment: Use “current” for the open list or “older” for the collapsed Older Minutes list.
+        options:
+          required: true
+          values:
+            - current
+            - older
+      order:
+        type: number
+        label: Display Order
+        comment: Smaller numbers appear first within the selected section. Use 10, 20, 30 to leave room between entries.
+        options:
+          required: true
+
   site_settings:
     path: _data
     name: Site-Wide Settings & Editable Documents
