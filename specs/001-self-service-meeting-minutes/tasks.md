@@ -47,8 +47,12 @@
 - [x] T014 Remove the temporary constitution Sync Impact Report from `.specify/memory/constitution.md`
 - [x] T015 Run schema verification and `npx @11ty/eleventy` using `specs/001-self-service-meeting-minutes/quickstart.md`
 - [ ] T016 Verify the real CloudCannon Content Editor collection, save a reversible test record, and remove it before publish
-- [ ] T017 Commit and push the intentional feature scope, then verify remote HEAD and a changed CloudCannon build ID
-- [ ] T018 Request `/about/` and all 13 documents, inspect browser errors, and capture production visual proof
+
+  **Blocked proof only**: CloudCannon's stored session expired. The deployed collection configuration,
+  document upload path, and reversible local record flow pass, but an authenticated editor-screen test
+  has not been captured.
+- [x] T017 Commit and push the intentional feature scope, then verify remote HEAD and a changed CloudCannon build ID
+- [x] T018 Request `/about/` and all 13 documents, inspect browser errors, and capture production visual proof
 
 ## Dependencies & Execution Order
 
