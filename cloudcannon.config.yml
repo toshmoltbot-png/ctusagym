@@ -391,14 +391,12 @@ collections_config:
           structures: _structures.judges_links
 
   judges_page:
-    path: _data
+    path: _data/judges_page
     name: Judges - Page Contacts & Links
     icon: contact_page
     output: false
     disable_add: true
     disable_add_folder: true
-    glob:
-      - _data/judges_page.json
     _inputs:
       general_email:
         type: email
