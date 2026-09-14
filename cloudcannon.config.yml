@@ -293,6 +293,52 @@ collections_config:
         label: Note (optional)
         comment: Shown in small grey text next to the gym name
 
+  state_committee:
+    path: _data/state_committee
+    name: State Committee
+    icon: groups
+    output: false
+    text_key: name
+    sort:
+      key: order
+      order: ascending
+    preview:
+      text:
+        - key: name
+      subtext:
+        - key: role
+      icon: groups
+    _inputs:
+      name:
+        type: text
+        label: Member Name
+        options:
+          required: true
+      role:
+        type: text
+        label: Committee Role
+        options:
+          required: true
+      email:
+        type: email
+        label: Public Email (optional)
+        comment: Leave blank to hide the email contact link.
+      emailLabel:
+        type: text
+        label: Email Link Text (optional)
+        comment: Leave blank to use Email followed by the committee role.
+      duties:
+        type: textarea
+        label: Duties and Responsibilities
+      order:
+        type: number
+        label: Display Order
+        comment: Lower numbers appear first on the About page.
+        options:
+          required: true
+          min: 1
+          step: 1
+
   judges_committee:
     path: _data/judges_committee
     name: Judges - Committee Roster
