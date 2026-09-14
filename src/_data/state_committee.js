@@ -12,9 +12,9 @@ module.exports = function() {
       const member = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
       return {
         ...member,
-        emailLabel: member.emailLabel || `Email ${member.role || member.name}`,
+        emailLabel: member.emailLabel || (member.role || member.name ? `Email ${member.role || member.name}` : 'Email'),
         order: Number.isFinite(member.order) ? member.order : Number.MAX_SAFE_INTEGER
       };
     })
-    .sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, 'en'));
+    .sort((a, b) => a.order - b.order || (a.name || '').localeCompare(b.name || '', 'en'));
 };
