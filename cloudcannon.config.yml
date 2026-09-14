@@ -342,18 +342,87 @@ collections_config:
   judges_committee:
     path: _data/judges_committee
     name: Judges - Committee Roster
+    description: Add a judge with + Add Judge. Open a judge to edit contact details, or use the file menu to delete a former judge. Save changes to publish.
     icon: gavel
     output: false
-    text_key: editor_label
+    disable_add: false
+    disable_add_folder: true
+    text_key: name
     sort:
-      key: editor_label
+      key: name
       order: ascending
+    schemas:
+      judge:
+        path: /.cloudcannon/schemas/judge.json
+        name: Judge
+    add_options:
+      - name: Add Judge
+        schema: judge
+        icon: person_add
+        editor: data
     preview:
       text:
         - key: name
       subtext:
         - key: role
       icon: gavel
+    _inputs:
+      name:
+        type: text
+        label: Judge Name
+        options:
+          required: true
+      role:
+        type: text
+        label: Role or Rating
+      email:
+        type: email
+        label: Public Email (optional)
+      phone:
+        type: text
+        label: Public Phone (optional)
+      contact_info:
+        type: textarea
+        label: Other Contact Information (optional)
+      external_links:
+        type: array
+        label: Judge Links (optional)
+        options:
+          structures: _structures.judges_links
+
+  judges_page:
+    path: _data
+    name: Judges - Page Contacts & Links
+    icon: contact_page
+    output: false
+    disable_add: true
+    disable_add_folder: true
+    glob:
+      - _data/judges_page.json
+    _inputs:
+      general_email:
+        type: email
+        label: General Information Email
+        comment: Updates the Contact box and every general contact email in the Judges page text.
+        options:
+          required: true
+      assigning_email:
+        type: email
+        label: Assigning Email
+        comment: Updates the Contact box and the CT Assigning section.
+        options:
+          required: true
+      additional_contacts:
+        type: array
+        label: Additional Page Contacts
+        options:
+          structures: _structures.judges_contacts
+      external_links:
+        type: array
+        label: External Links
+        comment: Add, edit, reorder, or remove sidebar links. Links open in a new tab.
+        options:
+          structures: _structures.judges_links
 
   hall_of_fame:
     path: _data/hall_of_fame
@@ -672,6 +741,44 @@ _editables:
     heading: true
 
 _structures:
+  judges_links:
+    values:
+      - label: External Link
+        icon: link
+        value:
+          label: ''
+          url: ''
+        _inputs:
+          label:
+            type: text
+            label: Link Text
+            options:
+              required: true
+          url:
+            type: url
+            label: Website URL
+            comment: Use the complete https:// website address. Opens in a new tab.
+            options:
+              required: true
+  judges_contacts:
+    values:
+      - label: Contact Detail
+        icon: contact_mail
+        value:
+          label: ''
+          value: ''
+          url: ''
+        _inputs:
+          label:
+            type: text
+            label: Contact Label
+          value:
+            type: text
+            label: Contact Text (email, phone, or other information)
+          url:
+            type: text
+            label: Optional Link
+            comment: Use mailto:name@example.com for email, tel:+15551234567 for phone, or https:// for a website.
   cards:
     values:
       - label: Info Card
