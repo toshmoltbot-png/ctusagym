@@ -553,7 +553,7 @@ collections_config:
     icon: settings
     output: false
     glob:
-      - _data/site.json
+      - site.json
 
   pages:
     path: pages
